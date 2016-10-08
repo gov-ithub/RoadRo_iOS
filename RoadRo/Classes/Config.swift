@@ -24,6 +24,12 @@ class Config {
     return dataProvider
   }()
   
+  var dataStore : CoreDataStore {
+    get {
+      return self.dataProvider.dataStore
+    }
+  }
+  
   // Handler for account state changed
   var eventAccountState = Event<AccountState>()
   

@@ -23,6 +23,8 @@ extension Config {
   }
   
   func didLogin(id: String, token: String) {
+    
+    // Save id and token
     Settings.saveObject(value: id, forKey: kAccountUserId)
     Settings.saveObject(value: token, forKey: kAccountToken)
     
@@ -31,9 +33,13 @@ extension Config {
   }
   
   func clearUserData() {
+    
     // Remove user keys
     Settings.removeObjectForKey(key: kAccountUserId)
     Settings.removeObjectForKey(key: kAccountToken)
+    
+    // Clean db
+    self.dataStore.clean()
     
     // Raise login event
     self.eventAccountState.raise(data: .loggedOut)

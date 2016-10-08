@@ -9,14 +9,12 @@
 import UIKit
 
 class FlowController : NSObject, UIGestureRecognizerDelegate {
-  var window: UIWindow
-  var config: Config
   
-  fileprivate lazy var mainNavigationController : UINavigationController = PortraitNavigationController()
-  
-  var currentNavigationController : UINavigationController?
+  fileprivate var window: UIWindow
+  fileprivate var config: Config
   
   init(config: Config, window: UIWindow) {
+    
     self.window = window
     self.config = config
     super.init()
@@ -26,19 +24,13 @@ class FlowController : NSObject, UIGestureRecognizerDelegate {
   }
   
   func rootController() -> UIViewController {
-    let navController : UINavigationController = self.mainNavigationController
-    
     var controller: UIViewController!
     if self.config.isLoggedIn {
       controller = self.createMainController()
     } else {
       controller = self.createSignupController()
     }
-    navController.viewControllers = [ controller ]
-    navController.automaticallyAdjustsScrollViewInsets = false
-    
-    self.currentNavigationController = navController
-    return navController
+    return controller
   }
   
   fileprivate func resetControllers() {
@@ -53,20 +45,22 @@ class FlowController : NSObject, UIGestureRecognizerDelegate {
       self.createReportController(),
       self.createReportController()
     ]
-    
     return tabController
   }
   
-  fileprivate func createReportController() -> ReportViewController {
-    let viewController = ReportViewController(config: config)
-    return viewController
+  fileprivate func createReportController() -> UIViewController {
+    let controller = ReportViewController(config: config)
+    let navController = UINavigationController(rootViewController: controller)
+    return navController
   }
   
-  fileprivate func createSignupController() -> SignupViewController {
+  fileprivate func createSignupController() -> UIViewController {
     let controller = SignupViewController(config: config)
     controller.didSignup = {[weak self] in
       self?.resetControllers()
     }
-    return controller
+    
+    let navController = UINavigationController(rootViewController: controller)
+    return navController
   }
 }

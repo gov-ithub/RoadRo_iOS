@@ -10,24 +10,24 @@ import UIKit
 
 extension FlowController {
   
-  internal func pushController(_ controller: UIViewController) {
-    if let currentNavController = self.currentNavigationController {
+  internal func push(controller: UIViewController) {
+    if let currentNavController = controller.navigationController {
       self.pushController(controller, navigationController: currentNavController)
     }
   }
   
-  internal func popController(_ animated: Bool) {
-    if let currentNavController = self.currentNavigationController {
+  internal func pop(controller: UIViewController, animated: Bool) {
+    if let currentNavController = controller.navigationController {
       currentNavController.popViewController(animated: animated)
     }
   }
   
-  internal func presentController(_ controller: UIViewController) {
-    self.currentNavigationController?.present(controller, animated: true, completion: nil)
+  internal func present(controller: UIViewController, from: UIViewController) {
+    from.navigationController?.present(controller, animated: true, completion: nil)
   }
   
-  internal func dismissController(_ animated: Bool) {
-    if let currentNavController = self.currentNavigationController {
+  internal func dismiss(controller:UIViewController, animated: Bool) {
+    if let currentNavController = controller.navigationController {
       currentNavController.dismiss(animated: animated, completion: nil)
     }
   }
@@ -40,9 +40,5 @@ extension FlowController {
     
     // Update back button
     navigationController.interactivePopGestureRecognizer?.delegate = self
-  }
-  
-  @objc fileprivate func dismissViewController() {
-    self.currentNavigationController?.dismiss(animated: true, completion: nil)
   }
 }

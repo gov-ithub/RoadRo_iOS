@@ -17,4 +17,8 @@ extension UIFont {
   class func fontAppBold(_ size: CGFloat) -> UIFont {
     return UIFont.boldSystemFont(ofSize: size)
   }
+  
+  class func fontRegularText() -> UIFont {
+    return UIFont.systemFont(ofSize: 14)
+  }
 }

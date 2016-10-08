@@ -56,6 +56,7 @@ class SignupViewController: UIViewController {
     
     // Call register api
     self.config.dataProvider.doRegister(phone: phoneNumber) {[weak self] (_, _) in
+      self?.config.didLogin(id: "123", token: "123")
       self?.didSignup?()
     }
   }

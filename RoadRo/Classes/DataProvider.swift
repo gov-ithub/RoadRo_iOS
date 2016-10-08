@@ -25,6 +25,8 @@ enum ApiPath {
 
 public class DataProvider {
   
+  public var dataStore : CoreDataStore = RealmStore()
+  
   // APi
   var kNetworkApiURL : String
   

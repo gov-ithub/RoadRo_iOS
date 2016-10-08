@@ -12,6 +12,20 @@
 		5B4DF4CE1DA93694008840D1 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4DF4CD1DA93694008840D1 /* Settings.swift */; };
 		5B4DF4D01DA93778008840D1 /* Config+Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4DF4CF1DA93778008840D1 /* Config+Account.swift */; };
 		5B4DF4D31DA93842008840D1 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4DF4D21DA93842008840D1 /* Event.swift */; };
+		5B4DF4DB1DA96990008840D1 /* ObjectsCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4DF4D51DA96990008840D1 /* ObjectsCollectionViewDataSource.swift */; };
+		5B4DF4DC1DA96990008840D1 /* ObjectsNofificationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4DF4D61DA96990008840D1 /* ObjectsNofificationControllerDelegate.swift */; };
+		5B4DF4DD1DA96990008840D1 /* ObjectsProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4DF4D71DA96990008840D1 /* ObjectsProviderProtocol.swift */; };
+		5B4DF4DE1DA96990008840D1 /* ObjectsTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4DF4D81DA96990008840D1 /* ObjectsTableViewDataSource.swift */; };
+		5B4DF4DF1DA96990008840D1 /* ObjectsTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4DF4D91DA96990008840D1 /* ObjectsTableViewDelegate.swift */; };
+		5B4DF4E01DA96990008840D1 /* CellConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4DF4DA1DA96990008840D1 /* CellConfigurator.swift */; };
+		5B4DF4E41DA96A00008840D1 /* CoreDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4DF4E31DA96A00008840D1 /* CoreDataStore.swift */; };
+		5B4DF4E61DA96A64008840D1 /* DataReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4DF4E51DA96A64008840D1 /* DataReport.swift */; };
+		5B4DF4E81DA96AE7008840D1 /* ReportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4DF4E71DA96AE7008840D1 /* ReportViewModel.swift */; };
+		5B4DF4EB1DA96B61008840D1 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B4DF4E91DA96B61008840D1 /* Realm.framework */; };
+		5B4DF4EC1DA96B61008840D1 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B4DF4EA1DA96B61008840D1 /* RealmSwift.framework */; };
+		5B4DF4EF1DA970AE008840D1 /* KeyboardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4DF4EE1DA970AE008840D1 /* KeyboardHandler.swift */; };
+		5B89EB781DA9746000779243 /* ReportPhotoSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B89EB771DA9746000779243 /* ReportPhotoSelector.swift */; };
+		5B89EB7A1DA977BD00779243 /* ReportInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B89EB791DA977BD00779243 /* ReportInputView.swift */; };
 		5BC8207C1DA910E300445B04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BC8207B1DA910E300445B04 /* Assets.xcassets */; };
 		5BC8207F1DA910E300445B04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BC8207D1DA910E300445B04 /* LaunchScreen.storyboard */; };
 		5BC8208A1DA9110B00445B04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC820881DA9110B00445B04 /* AppDelegate.swift */; };
@@ -44,6 +58,20 @@
 		5B4DF4CD1DA93694008840D1 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		5B4DF4CF1DA93778008840D1 /* Config+Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Config+Account.swift"; sourceTree = "<group>"; };
 		5B4DF4D21DA93842008840D1 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		5B4DF4D51DA96990008840D1 /* ObjectsCollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectsCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		5B4DF4D61DA96990008840D1 /* ObjectsNofificationControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectsNofificationControllerDelegate.swift; sourceTree = "<group>"; };
+		5B4DF4D71DA96990008840D1 /* ObjectsProviderProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectsProviderProtocol.swift; sourceTree = "<group>"; };
+		5B4DF4D81DA96990008840D1 /* ObjectsTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectsTableViewDataSource.swift; sourceTree = "<group>"; };
+		5B4DF4D91DA96990008840D1 /* ObjectsTableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectsTableViewDelegate.swift; sourceTree = "<group>"; };
+		5B4DF4DA1DA96990008840D1 /* CellConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellConfigurator.swift; sourceTree = "<group>"; };
+		5B4DF4E31DA96A00008840D1 /* CoreDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStore.swift; sourceTree = "<group>"; };
+		5B4DF4E51DA96A64008840D1 /* DataReport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataReport.swift; sourceTree = "<group>"; };
+		5B4DF4E71DA96AE7008840D1 /* ReportViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportViewModel.swift; sourceTree = "<group>"; };
+		5B4DF4E91DA96B61008840D1 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		5B4DF4EA1DA96B61008840D1 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		5B4DF4EE1DA970AE008840D1 /* KeyboardHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardHandler.swift; sourceTree = "<group>"; };
+		5B89EB771DA9746000779243 /* ReportPhotoSelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportPhotoSelector.swift; sourceTree = "<group>"; };
+		5B89EB791DA977BD00779243 /* ReportInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportInputView.swift; sourceTree = "<group>"; };
 		5BC820711DA910E300445B04 /* RoadRo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoadRo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BC8207B1DA910E300445B04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = RoadRo/Assets.xcassets; sourceTree = "<group>"; };
 		5BC8207E1DA910E300445B04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -77,7 +105,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B4DF4EB1DA96B61008840D1 /* Realm.framework in Frameworks */,
 				5BC820CF1DA91DA600445B04 /* Reachability.framework in Frameworks */,
+				5B4DF4EC1DA96B61008840D1 /* RealmSwift.framework in Frameworks */,
 				5BC820CC1DA91DA600445B04 /* Alamofire.framework in Frameworks */,
 				5BC820CE1DA91DA600445B04 /* Cartography.framework in Frameworks */,
 				5BC820D01DA91DA600445B04 /* SwiftyJSON.framework in Frameworks */,
@@ -102,6 +132,8 @@
 			children = (
 				5B4DF4C81DA93449008840D1 /* ReportViewController.swift */,
 				5B4DF4CA1DA93450008840D1 /* ReportView.swift */,
+				5B89EB771DA9746000779243 /* ReportPhotoSelector.swift */,
+				5B89EB791DA977BD00779243 /* ReportInputView.swift */,
 			);
 			name = Report;
 			sourceTree = "<group>";
@@ -113,12 +145,46 @@
 			name = History;
 			sourceTree = "<group>";
 		};
-		5B4DF4D11DA9383A008840D1 /* Events */ = {
+		5B4DF4D11DA9383A008840D1 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				5BC820D11DA91DC300445B04 /* Request+Cancelable.swift */,
+				5BC820D31DA91DED00445B04 /* Logging.swift */,
+				5B4DF4CD1DA93694008840D1 /* Settings.swift */,
 				5B4DF4D21DA93842008840D1 /* Event.swift */,
+				5B4DF4EE1DA970AE008840D1 /* KeyboardHandler.swift */,
 			);
-			name = Events;
+			name = Other;
+			sourceTree = "<group>";
+		};
+		5B4DF4D41DA96973008840D1 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				5B4DF4D51DA96990008840D1 /* ObjectsCollectionViewDataSource.swift */,
+				5B4DF4D61DA96990008840D1 /* ObjectsNofificationControllerDelegate.swift */,
+				5B4DF4D71DA96990008840D1 /* ObjectsProviderProtocol.swift */,
+				5B4DF4D81DA96990008840D1 /* ObjectsTableViewDataSource.swift */,
+				5B4DF4D91DA96990008840D1 /* ObjectsTableViewDelegate.swift */,
+				5B4DF4DA1DA96990008840D1 /* CellConfigurator.swift */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		5B4DF4E11DA969E2008840D1 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				5B4DF4E31DA96A00008840D1 /* CoreDataStore.swift */,
+				5B4DF4E51DA96A64008840D1 /* DataReport.swift */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		5B4DF4E21DA969EE008840D1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5B4DF4E71DA96AE7008840D1 /* ReportViewModel.swift */,
+			);
+			name = ViewModel;
 			sourceTree = "<group>";
 		};
 		5BC820681DA910E300445B04 = {
@@ -175,8 +241,10 @@
 				5BC8208E1DA9131E00445B04 /* Config.swift */,
 				5B4DF4CF1DA93778008840D1 /* Config+Account.swift */,
 				5BC8208F1DA9131E00445B04 /* Config+Keys.swift */,
-				5BC820B01DA9198A00445B04 /* DataProvider */,
 				5BC820921DA9135200445B04 /* Theme */,
+				5BC820B01DA9198A00445B04 /* DataProvider */,
+				5B4DF4E11DA969E2008840D1 /* CoreData */,
+				5B4DF4E21DA969EE008840D1 /* ViewModel */,
 			);
 			name = App;
 			sourceTree = "<group>";
@@ -213,10 +281,8 @@
 		5BC820A11DA9140400445B04 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				5BC820D11DA91DC300445B04 /* Request+Cancelable.swift */,
-				5BC820D31DA91DED00445B04 /* Logging.swift */,
-				5B4DF4CD1DA93694008840D1 /* Settings.swift */,
-				5B4DF4D11DA9383A008840D1 /* Events */,
+				5B4DF4D41DA96973008840D1 /* Data */,
+				5B4DF4D11DA9383A008840D1 /* Other */,
 				5BC820A21DA9141B00445B04 /* Custom view */,
 			);
 			name = Utils;
@@ -233,6 +299,8 @@
 		5BC820A51DA9163000445B04 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5B4DF4E91DA96B61008840D1 /* Realm.framework */,
+				5B4DF4EA1DA96B61008840D1 /* RealmSwift.framework */,
 				5BC820C71DA91DA600445B04 /* Alamofire.framework */,
 				5BC820C81DA91DA600445B04 /* AlamofireImage.framework */,
 				5BC820C91DA91DA600445B04 /* Cartography.framework */,
@@ -264,6 +332,7 @@
 				5BC8206E1DA910E300445B04 /* Frameworks */,
 				5BC8206F1DA910E300445B04 /* Resources */,
 				5BC820C01DA91B8600445B04 /* Carthage */,
+				5B4DF4ED1DA96C82008840D1 /* TODO */,
 			);
 			buildRules = (
 			);
@@ -322,6 +391,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		5B4DF4ED1DA96C82008840D1 /* TODO */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = TODO;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "KEYWORDS=\"TODO:|\\?\\?\\?:|\\!\\!\\!:\"\nfind \"${SRCROOT}/RoadRo/Classes/\" \\( -name \"*.swift\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($KEYWORDS).*\\$\" | perl -p -e \"s/($KEYWORDS)/ warning: \\$1/\"";
+		};
 		5BC820C01DA91B8600445B04 /* Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -350,18 +433,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B4DF4DC1DA96990008840D1 /* ObjectsNofificationControllerDelegate.swift in Sources */,
+				5B4DF4DB1DA96990008840D1 /* ObjectsCollectionViewDataSource.swift in Sources */,
 				5BC8208B1DA9110B00445B04 /* SignupViewController.swift in Sources */,
+				5B4DF4E61DA96A64008840D1 /* DataReport.swift in Sources */,
 				5B4DF4D01DA93778008840D1 /* Config+Account.swift in Sources */,
 				5BC8209F1DA913F300445B04 /* FlowController+Navigation.swift in Sources */,
 				5BC820A41DA9142200445B04 /* PortraitNavigationController.swift in Sources */,
 				5BC820D21DA91DC300445B04 /* Request+Cancelable.swift in Sources */,
+				5B89EB781DA9746000779243 /* ReportPhotoSelector.swift in Sources */,
+				5B89EB7A1DA977BD00779243 /* ReportInputView.swift in Sources */,
+				5B4DF4DD1DA96990008840D1 /* ObjectsProviderProtocol.swift in Sources */,
 				5BC820991DA9135C00445B04 /* UINavigationController+App.swift in Sources */,
 				5B4DF4CB1DA93450008840D1 /* ReportView.swift in Sources */,
 				5BC820911DA9131E00445B04 /* Config+Keys.swift in Sources */,
 				5BC820D41DA91DED00445B04 /* Logging.swift in Sources */,
+				5B4DF4E01DA96990008840D1 /* CellConfigurator.swift in Sources */,
+				5B4DF4DE1DA96990008840D1 /* ObjectsTableViewDataSource.swift in Sources */,
 				5BC820B41DA919C900445B04 /* DataProvider.swift in Sources */,
 				5BC820BF1DA91AF700445B04 /* DataProvider+Account.swift in Sources */,
 				5BC8209E1DA913F300445B04 /* FlowController.swift in Sources */,
+				5B4DF4E41DA96A00008840D1 /* CoreDataStore.swift in Sources */,
 				5B4DF4D31DA93842008840D1 /* Event.swift in Sources */,
 				5BC820971DA9135C00445B04 /* UIColor+App.swift in Sources */,
 				5BC8208A1DA9110B00445B04 /* AppDelegate.swift in Sources */,
@@ -369,9 +461,12 @@
 				5B4DF4CE1DA93694008840D1 /* Settings.swift in Sources */,
 				5BC820C61DA91CFB00445B04 /* SignupView.swift in Sources */,
 				5BC820981DA9135C00445B04 /* UIFont+App.swift in Sources */,
+				5B4DF4DF1DA96990008840D1 /* ObjectsTableViewDelegate.swift in Sources */,
+				5B4DF4E81DA96AE7008840D1 /* ReportViewModel.swift in Sources */,
 				5B4DF4C91DA93449008840D1 /* ReportViewController.swift in Sources */,
 				5BC820901DA9131E00445B04 /* Config.swift in Sources */,
 				5BC820C41DA91CE900445B04 /* NetworkReachability.swift in Sources */,
+				5B4DF4EF1DA970AE008840D1 /* KeyboardHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,7 +604,6 @@
 				);
 				INFOPLIST_FILE = RoadRo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = ro.wip.RoadRo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;

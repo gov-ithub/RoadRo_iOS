@@ -18,6 +18,10 @@ extension UIColor {
     return UIColor.colorCode(111, green: 189, blue: 228, alpha: 1.0)
   }
   
+  class func backgroundColor() -> UIColor {
+    return UIColor.colorCode(236, green: 237, blue: 238, alpha: 1.0)
+  }
+  
   class func textColor() -> UIColor {
     return UIColor.colorCode(81, green: 81, blue: 81, alpha: 1.0)
   }
