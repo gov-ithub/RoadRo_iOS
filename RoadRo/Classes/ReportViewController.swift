@@ -15,6 +15,7 @@ class ReportViewController: UIViewController {
   init(config: Config) {
     self.config = config
     super.init(nibName: nil, bundle: nil)
+    
     self.title = NSLocalizedString("Raporteaza", comment: "Raporteaza")
   }
   
@@ -29,5 +30,21 @@ class ReportViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    let item = UIBarButtonItem(title: NSLocalizedString("Trimite", comment: ""), style: .plain, target: self, action: #selector(sendPressed))
+    self.navigationItem.rightBarButtonItem = item
+    
+    // Start tracker
+    do {
+      try LocationTracker.instance.startTracker()
+    } catch {
+      DLog(object: error)
+    }
+  }
+  
+  @objc func sendPressed() {
+    LocationTracker.instance.getLocationAddress { (address) in
+      print(address)
+    }
   }
 }

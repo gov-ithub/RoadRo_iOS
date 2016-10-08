@@ -26,6 +26,7 @@
 		5B4DF4EF1DA970AE008840D1 /* KeyboardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4DF4EE1DA970AE008840D1 /* KeyboardHandler.swift */; };
 		5B89EB781DA9746000779243 /* ReportPhotoSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B89EB771DA9746000779243 /* ReportPhotoSelector.swift */; };
 		5B89EB7A1DA977BD00779243 /* ReportInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B89EB791DA977BD00779243 /* ReportInputView.swift */; };
+		5B89EB7C1DA9800C00779243 /* LocationTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B89EB7B1DA9800C00779243 /* LocationTracker.swift */; };
 		5BC8207C1DA910E300445B04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BC8207B1DA910E300445B04 /* Assets.xcassets */; };
 		5BC8207F1DA910E300445B04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BC8207D1DA910E300445B04 /* LaunchScreen.storyboard */; };
 		5BC8208A1DA9110B00445B04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC820881DA9110B00445B04 /* AppDelegate.swift */; };
@@ -72,6 +73,7 @@
 		5B4DF4EE1DA970AE008840D1 /* KeyboardHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardHandler.swift; sourceTree = "<group>"; };
 		5B89EB771DA9746000779243 /* ReportPhotoSelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportPhotoSelector.swift; sourceTree = "<group>"; };
 		5B89EB791DA977BD00779243 /* ReportInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportInputView.swift; sourceTree = "<group>"; };
+		5B89EB7B1DA9800C00779243 /* LocationTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTracker.swift; sourceTree = "<group>"; };
 		5BC820711DA910E300445B04 /* RoadRo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoadRo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BC8207B1DA910E300445B04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = RoadRo/Assets.xcassets; sourceTree = "<group>"; };
 		5BC8207E1DA910E300445B04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -152,7 +154,6 @@
 				5BC820D31DA91DED00445B04 /* Logging.swift */,
 				5B4DF4CD1DA93694008840D1 /* Settings.swift */,
 				5B4DF4D21DA93842008840D1 /* Event.swift */,
-				5B4DF4EE1DA970AE008840D1 /* KeyboardHandler.swift */,
 			);
 			name = Other;
 			sourceTree = "<group>";
@@ -281,6 +282,8 @@
 		5BC820A11DA9140400445B04 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				5B89EB7B1DA9800C00779243 /* LocationTracker.swift */,
+				5B4DF4EE1DA970AE008840D1 /* KeyboardHandler.swift */,
 				5B4DF4D41DA96973008840D1 /* Data */,
 				5B4DF4D11DA9383A008840D1 /* Other */,
 				5BC820A21DA9141B00445B04 /* Custom view */,
@@ -442,6 +445,7 @@
 				5BC820A41DA9142200445B04 /* PortraitNavigationController.swift in Sources */,
 				5BC820D21DA91DC300445B04 /* Request+Cancelable.swift in Sources */,
 				5B89EB781DA9746000779243 /* ReportPhotoSelector.swift in Sources */,
+				5B89EB7C1DA9800C00779243 /* LocationTracker.swift in Sources */,
 				5B89EB7A1DA977BD00779243 /* ReportInputView.swift in Sources */,
 				5B4DF4DD1DA96990008840D1 /* ObjectsProviderProtocol.swift in Sources */,
 				5BC820991DA9135C00445B04 /* UINavigationController+App.swift in Sources */,
