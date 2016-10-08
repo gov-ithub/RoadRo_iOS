@@ -12,9 +12,10 @@ import SwiftyJSON
 
 public extension DataProvider {
   
-  @discardableResult public func doGetResorts(dataStore: CoreDataStore, completion: DataResponseHandler?) -> Cancelable? {
+  @discardableResult public func doRegister(phone: String, completion: DataResponseHandler?) -> Cancelable? {
     
-    return self.performRequest(method: .get, path: ApiPath.Slopes.path(), params: nil) { (result, errorMessage) -> Void in
+    return self.performRequest(method: .get, path: ApiPath.Register.path(), params: nil) { (result, errorMessage) -> Void in
+      completion?(nil, nil)
     }
   }
 }

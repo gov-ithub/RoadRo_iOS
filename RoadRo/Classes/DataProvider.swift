@@ -14,18 +14,16 @@ import SwiftyJSON
 public typealias DataResponseHandler = (_ result: Any?, _ errorMessage: String?) -> Void
 
 enum ApiPath {
-  case Slopes
+  case Register
   
   func path() -> String {
     switch self {
-    case .Slopes: return "/v1/slopes"
+    case .Register: return "/api/register"
     }
   }
 }
 
 public class DataProvider {
-  
-  public var dataStore : CoreDataStore = RealmStore()
   
   // APi
   var kNetworkApiURL : String

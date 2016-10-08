@@ -11,16 +11,12 @@ import UIKit
 extension UINavigationController {
   class func applyStyle() {
     let bar = UINavigationBar.appearance()
-    bar.isTranslucent = true
+    bar.isTranslucent = false
     bar.tintColor = UIColor.white
-    bar.backgroundColor = UIColor.clear
-    bar.barTintColor = UIColor.clear
-    bar.titleTextAttributes = [ NSFontAttributeName : UIFont.fontAppRegular(20), NSForegroundColorAttributeName: UIColor.white ]
-    bar.setBackgroundImage(UIImage(), for: .default)
-    bar.shadowImage = UIImage()
+    bar.titleTextAttributes = [ NSFontAttributeName : UIFont.fontAppRegular(16), NSForegroundColorAttributeName: UIColor.black ]
     
     let barItem = UIBarButtonItem.appearance()
-    let attributes = [ NSFontAttributeName : UIFont.fontAppRegular(16) ]
+    let attributes = [ NSFontAttributeName : UIFont.fontAppRegular(16), NSForegroundColorAttributeName: UIColor.black ]
     barItem.setTitleTextAttributes(attributes, for: UIControlState())
     
     let controler = UISegmentedControl.appearance()

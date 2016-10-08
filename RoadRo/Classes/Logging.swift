@@ -2,7 +2,7 @@
 //  Logging.swift
 //  SkiRomania
 //
-//  Created by Beni Pater on 21/09/2016.
+//  Created by Mihai Dumitrache on 08/10/2016.
 //  Copyright © 2016 Work In Progress. All rights reserved.
 //
 

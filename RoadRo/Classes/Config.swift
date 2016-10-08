@@ -18,16 +18,14 @@ class Config {
   
   var reachability = NetworkReachability()
   
+  // Api data provider
   lazy var dataProvider : DataProvider = {
     let dataProvider = DataProvider(apiNetworkUrl: Config.Urls.kNetworkApiUrl)
     return dataProvider
   }()
   
-  var dataStore : CoreDataStore {
-    get {
-      return self.dataProvider.dataStore
-    }
-  }
+  // Handler for account state changed
+  var eventAccountState = Event<AccountState>()
   
   init() {
   }

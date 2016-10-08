@@ -11,12 +11,25 @@ import Cartography
 
 class SignupView: UIView {
   
-  fileprivate var textField: UITextField = {
+  var textField: UITextField = {
     let textField = UITextField()
     textField.backgroundColor = UIColor.white
     textField.font = UIFont.fontAppRegular(16)
+    textField.borderStyle = .line
+    textField.keyboardType = .numberPad
+    textField.returnKeyType = .send
+    
+    #if DEBUG
+      textField.text = "0746123456"
+    #endif
     return textField
   }()
+  
+  var phoneNumber: String? {
+    get {
+      return self.textField.text
+    }
+  }
   
   init() {
     super.init(frame: CGRect.zero)
@@ -37,5 +50,6 @@ class SignupView: UIView {
       view.height == 40
       view.centerY == view.superview!.centerY
     }
+    textField.becomeFirstResponder()
   }
 }

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B4DF4C91DA93449008840D1 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4DF4C81DA93449008840D1 /* ReportViewController.swift */; };
+		5B4DF4CB1DA93450008840D1 /* ReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4DF4CA1DA93450008840D1 /* ReportView.swift */; };
+		5B4DF4CE1DA93694008840D1 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4DF4CD1DA93694008840D1 /* Settings.swift */; };
+		5B4DF4D01DA93778008840D1 /* Config+Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4DF4CF1DA93778008840D1 /* Config+Account.swift */; };
+		5B4DF4D31DA93842008840D1 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4DF4D21DA93842008840D1 /* Event.swift */; };
 		5BC8207C1DA910E300445B04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BC8207B1DA910E300445B04 /* Assets.xcassets */; };
 		5BC8207F1DA910E300445B04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BC8207D1DA910E300445B04 /* LaunchScreen.storyboard */; };
 		5BC8208A1DA9110B00445B04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC820881DA9110B00445B04 /* AppDelegate.swift */; };
@@ -20,9 +25,6 @@
 		5BC8209F1DA913F300445B04 /* FlowController+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC8209D1DA913F300445B04 /* FlowController+Navigation.swift */; };
 		5BC820A41DA9142200445B04 /* PortraitNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC820A31DA9142200445B04 /* PortraitNavigationController.swift */; };
 		5BC820B41DA919C900445B04 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC820B31DA919C900445B04 /* DataProvider.swift */; };
-		5BC820B71DA91AAD00445B04 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BC820B51DA91AAD00445B04 /* Realm.framework */; };
-		5BC820B81DA91AAD00445B04 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BC820B61DA91AAD00445B04 /* RealmSwift.framework */; };
-		5BC820BB1DA91ACC00445B04 /* CoreDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC820BA1DA91ACC00445B04 /* CoreDataStore.swift */; };
 		5BC820BD1DA91AF300445B04 /* DataProvider+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC820BC1DA91AF300445B04 /* DataProvider+Network.swift */; };
 		5BC820BF1DA91AF700445B04 /* DataProvider+Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC820BE1DA91AF700445B04 /* DataProvider+Account.swift */; };
 		5BC820C41DA91CE900445B04 /* NetworkReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC820C31DA91CE900445B04 /* NetworkReachability.swift */; };
@@ -37,6 +39,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B4DF4C81DA93449008840D1 /* ReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
+		5B4DF4CA1DA93450008840D1 /* ReportView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportView.swift; sourceTree = "<group>"; };
+		5B4DF4CD1DA93694008840D1 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		5B4DF4CF1DA93778008840D1 /* Config+Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Config+Account.swift"; sourceTree = "<group>"; };
+		5B4DF4D21DA93842008840D1 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		5BC820711DA910E300445B04 /* RoadRo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoadRo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BC8207B1DA910E300445B04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = RoadRo/Assets.xcassets; sourceTree = "<group>"; };
 		5BC8207E1DA910E300445B04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -52,9 +59,6 @@
 		5BC8209D1DA913F300445B04 /* FlowController+Navigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FlowController+Navigation.swift"; sourceTree = "<group>"; };
 		5BC820A31DA9142200445B04 /* PortraitNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortraitNavigationController.swift; sourceTree = "<group>"; };
 		5BC820B31DA919C900445B04 /* DataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
-		5BC820B51DA91AAD00445B04 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
-		5BC820B61DA91AAD00445B04 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
-		5BC820BA1DA91ACC00445B04 /* CoreDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStore.swift; sourceTree = "<group>"; };
 		5BC820BC1DA91AF300445B04 /* DataProvider+Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DataProvider+Network.swift"; sourceTree = "<group>"; };
 		5BC820BE1DA91AF700445B04 /* DataProvider+Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DataProvider+Account.swift"; sourceTree = "<group>"; };
 		5BC820C31DA91CE900445B04 /* NetworkReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkReachability.swift; sourceTree = "<group>"; };
@@ -73,12 +77,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BC820B71DA91AAD00445B04 /* Realm.framework in Frameworks */,
 				5BC820CF1DA91DA600445B04 /* Reachability.framework in Frameworks */,
 				5BC820CC1DA91DA600445B04 /* Alamofire.framework in Frameworks */,
 				5BC820CE1DA91DA600445B04 /* Cartography.framework in Frameworks */,
 				5BC820D01DA91DA600445B04 /* SwiftyJSON.framework in Frameworks */,
-				5BC820B81DA91AAD00445B04 /* RealmSwift.framework in Frameworks */,
 				5BC820CD1DA91DA600445B04 /* AlamofireImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -86,6 +88,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B4DF4C61DA93431008840D1 /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				5BC820891DA9110B00445B04 /* SignupViewController.swift */,
+				5BC820C51DA91CFB00445B04 /* SignupView.swift */,
+			);
+			name = Signup;
+			sourceTree = "<group>";
+		};
+		5B4DF4C71DA93439008840D1 /* Report */ = {
+			isa = PBXGroup;
+			children = (
+				5B4DF4C81DA93449008840D1 /* ReportViewController.swift */,
+				5B4DF4CA1DA93450008840D1 /* ReportView.swift */,
+			);
+			name = Report;
+			sourceTree = "<group>";
+		};
+		5B4DF4CC1DA93617008840D1 /* History */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = History;
+			sourceTree = "<group>";
+		};
+		5B4DF4D11DA9383A008840D1 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				5B4DF4D21DA93842008840D1 /* Event.swift */,
+			);
+			name = Events;
+			sourceTree = "<group>";
+		};
 		5BC820681DA910E300445B04 = {
 			isa = PBXGroup;
 			children = (
@@ -138,8 +173,8 @@
 			isa = PBXGroup;
 			children = (
 				5BC8208E1DA9131E00445B04 /* Config.swift */,
+				5B4DF4CF1DA93778008840D1 /* Config+Account.swift */,
 				5BC8208F1DA9131E00445B04 /* Config+Keys.swift */,
-				5BC820B91DA91AB900445B04 /* CoreData */,
 				5BC820B01DA9198A00445B04 /* DataProvider */,
 				5BC820921DA9135200445B04 /* Theme */,
 			);
@@ -168,8 +203,9 @@
 		5BC820A01DA913F800445B04 /* View controllers */ = {
 			isa = PBXGroup;
 			children = (
-				5BC820891DA9110B00445B04 /* SignupViewController.swift */,
-				5BC820C51DA91CFB00445B04 /* SignupView.swift */,
+				5B4DF4C61DA93431008840D1 /* Signup */,
+				5B4DF4C71DA93439008840D1 /* Report */,
+				5B4DF4CC1DA93617008840D1 /* History */,
 			);
 			name = "View controllers";
 			sourceTree = "<group>";
@@ -179,6 +215,8 @@
 			children = (
 				5BC820D11DA91DC300445B04 /* Request+Cancelable.swift */,
 				5BC820D31DA91DED00445B04 /* Logging.swift */,
+				5B4DF4CD1DA93694008840D1 /* Settings.swift */,
+				5B4DF4D11DA9383A008840D1 /* Events */,
 				5BC820A21DA9141B00445B04 /* Custom view */,
 			);
 			name = Utils;
@@ -200,8 +238,6 @@
 				5BC820C91DA91DA600445B04 /* Cartography.framework */,
 				5BC820CA1DA91DA600445B04 /* Reachability.framework */,
 				5BC820CB1DA91DA600445B04 /* SwiftyJSON.framework */,
-				5BC820B51DA91AAD00445B04 /* Realm.framework */,
-				5BC820B61DA91AAD00445B04 /* RealmSwift.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -215,14 +251,6 @@
 				5BC820BE1DA91AF700445B04 /* DataProvider+Account.swift */,
 			);
 			name = DataProvider;
-			sourceTree = "<group>";
-		};
-		5BC820B91DA91AB900445B04 /* CoreData */ = {
-			isa = PBXGroup;
-			children = (
-				5BC820BA1DA91ACC00445B04 /* CoreDataStore.swift */,
-			);
-			name = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,21 +351,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BC8208B1DA9110B00445B04 /* SignupViewController.swift in Sources */,
+				5B4DF4D01DA93778008840D1 /* Config+Account.swift in Sources */,
 				5BC8209F1DA913F300445B04 /* FlowController+Navigation.swift in Sources */,
 				5BC820A41DA9142200445B04 /* PortraitNavigationController.swift in Sources */,
 				5BC820D21DA91DC300445B04 /* Request+Cancelable.swift in Sources */,
 				5BC820991DA9135C00445B04 /* UINavigationController+App.swift in Sources */,
+				5B4DF4CB1DA93450008840D1 /* ReportView.swift in Sources */,
 				5BC820911DA9131E00445B04 /* Config+Keys.swift in Sources */,
-				5BC820BB1DA91ACC00445B04 /* CoreDataStore.swift in Sources */,
 				5BC820D41DA91DED00445B04 /* Logging.swift in Sources */,
 				5BC820B41DA919C900445B04 /* DataProvider.swift in Sources */,
 				5BC820BF1DA91AF700445B04 /* DataProvider+Account.swift in Sources */,
 				5BC8209E1DA913F300445B04 /* FlowController.swift in Sources */,
+				5B4DF4D31DA93842008840D1 /* Event.swift in Sources */,
 				5BC820971DA9135C00445B04 /* UIColor+App.swift in Sources */,
 				5BC8208A1DA9110B00445B04 /* AppDelegate.swift in Sources */,
 				5BC820BD1DA91AF300445B04 /* DataProvider+Network.swift in Sources */,
+				5B4DF4CE1DA93694008840D1 /* Settings.swift in Sources */,
 				5BC820C61DA91CFB00445B04 /* SignupView.swift in Sources */,
 				5BC820981DA9135C00445B04 /* UIFont+App.swift in Sources */,
+				5B4DF4C91DA93449008840D1 /* ReportViewController.swift in Sources */,
 				5BC820901DA9131E00445B04 /* Config.swift in Sources */,
 				5BC820C41DA91CE900445B04 /* NetworkReachability.swift in Sources */,
 			);
@@ -459,6 +491,7 @@
 				);
 				INFOPLIST_FILE = RoadRo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = ro.wip.RoadRo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -476,6 +509,7 @@
 				);
 				INFOPLIST_FILE = RoadRo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = ro.wip.RoadRo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;

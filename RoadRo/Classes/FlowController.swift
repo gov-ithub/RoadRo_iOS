@@ -28,7 +28,12 @@ class FlowController : NSObject, UIGestureRecognizerDelegate {
   func rootController() -> UIViewController {
     let navController : UINavigationController = self.mainNavigationController
     
-    let controller = self.createSignupController()
+    var controller: UIViewController!
+    if self.config.isLoggedIn {
+      controller = self.createMainController()
+    } else {
+      controller = self.createSignupController()
+    }
     navController.viewControllers = [ controller ]
     navController.automaticallyAdjustsScrollViewInsets = false
     
@@ -41,7 +46,20 @@ class FlowController : NSObject, UIGestureRecognizerDelegate {
   }
   
   fileprivate func createMainController() -> UIViewController {
-    return UIViewController()
+    
+    let tabController = UITabBarController()
+    tabController.viewControllers = [
+      self.createReportController(),
+      self.createReportController(),
+      self.createReportController()
+    ]
+    
+    return tabController
+  }
+  
+  fileprivate func createReportController() -> ReportViewController {
+    let viewController = ReportViewController(config: config)
+    return viewController
   }
   
   fileprivate func createSignupController() -> SignupViewController {
