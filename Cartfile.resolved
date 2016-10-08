@@ -1,0 +1,6 @@
+github "Alamofire/Alamofire" "4.0.1"
+github "robb/Cartography" "037b966331d883d39eb1d1da5b518c84fac7dda4"
+github "ashleymills/Reachability.swift" "v3"
+github "appsailor/SwiftyJSON" "de73429b38b8994f614fb27c5ec094bb8a4833f2"
+github "realm/realm-cocoa" "v2.0.2"
+github "Alamofire/AlamofireImage" "3.1.0"
