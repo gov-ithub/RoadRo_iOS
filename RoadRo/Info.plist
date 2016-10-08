@@ -24,6 +24,10 @@
 	<string>LaunchScreen</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Ataseaza locatia ta la raportari.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Fotografiaza parcarile ilegale.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Fotografiaza parcarile ilegale.</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

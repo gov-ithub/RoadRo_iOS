@@ -13,6 +13,9 @@ class FlowController : NSObject, UIGestureRecognizerDelegate {
   fileprivate var window: UIWindow
   fileprivate var config: Config
   
+  internal var imagePicker: ImagePicker?
+  var imagePickerController : UIImagePickerController?
+  
   init(config: Config, window: UIWindow) {
     
     self.window = window
@@ -51,6 +54,14 @@ class FlowController : NSObject, UIGestureRecognizerDelegate {
   fileprivate func createReportController() -> UIViewController {
     let controller = ReportViewController(config: config)
     let navController = UINavigationController(rootViewController: controller)
+    
+    controller.onPickImage = {[weak self] (selection: ((_ image : UIImage?) -> Void)?) in
+      if let controller = controller.navigationController {
+        self?.showImagePicker(from: controller, withCompletion: { (image) in
+          selection?(image)
+        })
+      }
+    }
     return navController
   }
   

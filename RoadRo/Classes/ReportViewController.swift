@@ -12,6 +12,8 @@ class ReportViewController: UIViewController {
   
   fileprivate var config: Config
   
+  var onPickImage: ((_ selection : ((_ image : UIImage?) -> Void)?) -> Void)?
+  
   init(config: Config) {
     self.config = config
     super.init(nibName: nil, bundle: nil)
@@ -43,8 +45,13 @@ class ReportViewController: UIViewController {
   }
   
   @objc func sendPressed() {
-    LocationTracker.instance.getLocationAddress { (address) in
-      print(address)
-    }
+    //    LocationTracker.instance.getLocationAddress { (address) in
+    //      print(address)
+    //    }
+
+    ActivityIndicator.show()
+//    onPickImage?({(image) -> Void in
+//      print(image)
+//      })
   }
 }
