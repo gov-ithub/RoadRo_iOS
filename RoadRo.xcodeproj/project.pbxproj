@@ -30,6 +30,10 @@
 		5B89EB7E1DA98B0000779243 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B89EB7D1DA98B0000779243 /* ImagePicker.swift */; };
 		5B89EB801DA98C6500779243 /* FlowController+ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B89EB7F1DA98C6500779243 /* FlowController+ImagePicker.swift */; };
 		5B89EB821DA9953000779243 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B89EB811DA9953000779243 /* ActivityIndicator.swift */; };
+		5B89EB841DA9962800779243 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B89EB831DA9962800779243 /* HistoryViewController.swift */; };
+		5B89EB861DA9964000779243 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B89EB851DA9964000779243 /* HistoryView.swift */; };
+		5B89EB881DA996D800779243 /* HistoryDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B89EB871DA996D800779243 /* HistoryDataProvider.swift */; };
+		5B89EB8A1DA9982E00779243 /* ReportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B89EB891DA9982E00779243 /* ReportTableViewCell.swift */; };
 		5BC8207C1DA910E300445B04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BC8207B1DA910E300445B04 /* Assets.xcassets */; };
 		5BC8207F1DA910E300445B04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BC8207D1DA910E300445B04 /* LaunchScreen.storyboard */; };
 		5BC8208A1DA9110B00445B04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC820881DA9110B00445B04 /* AppDelegate.swift */; };
@@ -80,6 +84,10 @@
 		5B89EB7D1DA98B0000779243 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		5B89EB7F1DA98C6500779243 /* FlowController+ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FlowController+ImagePicker.swift"; sourceTree = "<group>"; };
 		5B89EB811DA9953000779243 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		5B89EB831DA9962800779243 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		5B89EB851DA9964000779243 /* HistoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		5B89EB871DA996D800779243 /* HistoryDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryDataProvider.swift; sourceTree = "<group>"; };
+		5B89EB891DA9982E00779243 /* ReportTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportTableViewCell.swift; sourceTree = "<group>"; };
 		5BC820711DA910E300445B04 /* RoadRo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoadRo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BC8207B1DA910E300445B04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = RoadRo/Assets.xcassets; sourceTree = "<group>"; };
 		5BC8207E1DA910E300445B04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -149,6 +157,10 @@
 		5B4DF4CC1DA93617008840D1 /* History */ = {
 			isa = PBXGroup;
 			children = (
+				5B89EB831DA9962800779243 /* HistoryViewController.swift */,
+				5B89EB851DA9964000779243 /* HistoryView.swift */,
+				5B89EB871DA996D800779243 /* HistoryDataProvider.swift */,
+				5B89EB891DA9982E00779243 /* ReportTableViewCell.swift */,
 			);
 			name = History;
 			sourceTree = "<group>";
@@ -462,11 +474,13 @@
 				5B4DF4CB1DA93450008840D1 /* ReportView.swift in Sources */,
 				5BC820911DA9131E00445B04 /* Config+Keys.swift in Sources */,
 				5BC820D41DA91DED00445B04 /* Logging.swift in Sources */,
+				5B89EB861DA9964000779243 /* HistoryView.swift in Sources */,
 				5B4DF4E01DA96990008840D1 /* CellConfigurator.swift in Sources */,
 				5B4DF4DE1DA96990008840D1 /* ObjectsTableViewDataSource.swift in Sources */,
 				5BC820B41DA919C900445B04 /* DataProvider.swift in Sources */,
 				5BC820BF1DA91AF700445B04 /* DataProvider+Account.swift in Sources */,
 				5BC8209E1DA913F300445B04 /* FlowController.swift in Sources */,
+				5B89EB881DA996D800779243 /* HistoryDataProvider.swift in Sources */,
 				5B89EB7E1DA98B0000779243 /* ImagePicker.swift in Sources */,
 				5B4DF4E41DA96A00008840D1 /* CoreDataStore.swift in Sources */,
 				5B4DF4D31DA93842008840D1 /* Event.swift in Sources */,
@@ -475,6 +489,8 @@
 				5BC820BD1DA91AF300445B04 /* DataProvider+Network.swift in Sources */,
 				5B4DF4CE1DA93694008840D1 /* Settings.swift in Sources */,
 				5BC820C61DA91CFB00445B04 /* SignupView.swift in Sources */,
+				5B89EB841DA9962800779243 /* HistoryViewController.swift in Sources */,
+				5B89EB8A1DA9982E00779243 /* ReportTableViewCell.swift in Sources */,
 				5BC820981DA9135C00445B04 /* UIFont+App.swift in Sources */,
 				5B4DF4DF1DA96990008840D1 /* ObjectsTableViewDelegate.swift in Sources */,
 				5B4DF4E81DA96AE7008840D1 /* ReportViewModel.swift in Sources */,
