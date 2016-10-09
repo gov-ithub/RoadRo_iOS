@@ -13,15 +13,6 @@ class SignupViewController: FlowBaseViewController {
   fileprivate var contentView: SignupView { get { return self.view as! SignupView } }
   fileprivate var config: Config
   
-  fileprivate var sendButton: UIBarButtonItem = {
-    let item = UIBarButtonItem(
-      title: NSLocalizedString("Trimite", comment: "Trimite"),
-      style: .done,
-      target: self,
-      action: #selector(sendPressed))
-    return item
-  }()
-  
   var didSignup: (() -> Void)?
   
   init(config: Config) {
@@ -36,12 +27,14 @@ class SignupViewController: FlowBaseViewController {
   
   override func loadView() {
     let view = SignupView()
+    view.onSendPressed = {[weak self] in
+      self?.sendPressed()
+    }
     self.view = view
   }
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    self.navigationItem.rightBarButtonItem = sendButton
     self.navigationItem.hidesBackButton = true
   }
   
