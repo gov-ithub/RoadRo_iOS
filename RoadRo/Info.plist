@@ -28,7 +28,7 @@
 	<key>NSCameraUsageDescription</key>
 	<string>Fotografiaza parcarile ilegale.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Ataseaza locatia ta la raportari.</string>
+	<string>Folosim localizarea ta pentru a o inlcude la sesizări.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Fotografiaza parcarile ilegale.</string>
 	<key>UILaunchStoryboardName</key>

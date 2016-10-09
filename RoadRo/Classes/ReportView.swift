@@ -30,7 +30,7 @@ class ReportView: UIView {
   fileprivate var titleLabel: UILabel = {
     let label = UILabel()
     label.font = UIFont.fontRegularText()
-    label.text = NSLocalizedString("Pentru a ne trimite o reclamație, vă rugăm să\ncompletați formularul de mai jos", comment: "")
+    label.text = NSLocalizedString("Pentru a ne trimite o sesizare, te rugăm să\ncompletezi formularul de mai jos", comment: "")
     label.textColor = UIColor.textColorHighlighted()
     label.textAlignment = .center
     label.numberOfLines = 0
@@ -71,7 +71,7 @@ class ReportView: UIView {
   }()
   
   fileprivate var sendView: RoundedButton = {
-    let title = NSLocalizedString("Trimite reclamație", comment: "")
+    let title = NSLocalizedString("Trimite sesizarea", comment: "")
     let view = RoundedButton(title: title)
     return view
   }()
