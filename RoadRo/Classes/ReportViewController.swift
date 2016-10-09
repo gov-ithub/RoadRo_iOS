@@ -46,7 +46,7 @@ class ReportViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    let item = UIBarButtonItem(title: "Logout", style: .done, target: self, action: #selector(logoutPressed))
+    let item = UIBarButtonItem(title: "           ", style: .done, target: self, action: #selector(logoutPressed))
     self.navigationItem.leftBarButtonItem = item
     
     // Start tracker
