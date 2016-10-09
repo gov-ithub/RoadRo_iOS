@@ -21,8 +21,8 @@ class ReportViewController: UIViewController {
     self.title = NSLocalizedString("Reclamatie", comment: "")
     self.tabBarItem = UITabBarItem(
       title: NSLocalizedString("Reclamatie", comment: ""),
-      image: UIImage(named: "communityDisabled"),
-      selectedImage: UIImage(named: "communityEnabled"))
+      image: UIImage(named: "raportDisabled"),
+      selectedImage: UIImage(named: "raportEnabled"))
   }
   
   required init?(coder aDecoder: NSCoder) {
@@ -31,15 +31,15 @@ class ReportViewController: UIViewController {
   
   override func loadView() {
     let view = ReportView()
+    view.onSend = {[weak self] in
+      self?.sendPressed()
+    }
     self.view = view
   }
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    let item = UIBarButtonItem(title: NSLocalizedString("Trimite", comment: ""), style: .plain, target: self, action: #selector(sendPressed))
-    self.navigationItem.rightBarButtonItem = item
-    
+
     // Start tracker
     do {
       try LocationTracker.instance.startTracker()
@@ -48,7 +48,8 @@ class ReportViewController: UIViewController {
     }
   }
   
-  @objc func sendPressed() {
+  fileprivate func sendPressed() {
+    print("send pressed")
     //    LocationTracker.instance.getLocationAddress { (address) in
     //      print(address)
     //    }
