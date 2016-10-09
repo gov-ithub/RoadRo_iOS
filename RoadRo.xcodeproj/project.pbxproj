@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5B1D28C21DAA297600F34B61 /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1D28C11DAA297600F34B61 /* LineView.swift */; };
+		5B1D28C41DAA308E00F34B61 /* ReportImageSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1D28C31DAA308E00F34B61 /* ReportImageSelectorView.swift */; };
 		5B4DF4C91DA93449008840D1 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4DF4C81DA93449008840D1 /* ReportViewController.swift */; };
 		5B4DF4CB1DA93450008840D1 /* ReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4DF4CA1DA93450008840D1 /* ReportView.swift */; };
 		5B4DF4CE1DA93694008840D1 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4DF4CD1DA93694008840D1 /* Settings.swift */; };
@@ -69,6 +70,7 @@
 
 /* Begin PBXFileReference section */
 		5B1D28C11DAA297600F34B61 /* LineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
+		5B1D28C31DAA308E00F34B61 /* ReportImageSelectorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportImageSelectorView.swift; sourceTree = "<group>"; };
 		5B4DF4C81DA93449008840D1 /* ReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
 		5B4DF4CA1DA93450008840D1 /* ReportView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportView.swift; sourceTree = "<group>"; };
 		5B4DF4CD1DA93694008840D1 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
@@ -162,8 +164,9 @@
 			children = (
 				5B4DF4C81DA93449008840D1 /* ReportViewController.swift */,
 				5B4DF4CA1DA93450008840D1 /* ReportView.swift */,
-				5B89EB771DA9746000779243 /* ReportPhotoSelector.swift */,
 				5B89EB791DA977BD00779243 /* ReportInputView.swift */,
+				5B89EB771DA9746000779243 /* ReportPhotoSelector.swift */,
+				5B1D28C31DAA308E00F34B61 /* ReportImageSelectorView.swift */,
 			);
 			name = Report;
 			sourceTree = "<group>";
@@ -501,6 +504,7 @@
 				5B4DF4DD1DA96990008840D1 /* ObjectsProviderProtocol.swift in Sources */,
 				5BC820991DA9135C00445B04 /* UINavigationController+App.swift in Sources */,
 				5B4DF4CB1DA93450008840D1 /* ReportView.swift in Sources */,
+				5B1D28C41DAA308E00F34B61 /* ReportImageSelectorView.swift in Sources */,
 				5BCF86D31DAA175900C928BA /* TableContentMessageView.swift in Sources */,
 				5BC820911DA9131E00445B04 /* Config+Keys.swift in Sources */,
 				5BC820D41DA91DED00445B04 /* Logging.swift in Sources */,

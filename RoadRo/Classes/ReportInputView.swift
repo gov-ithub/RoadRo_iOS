@@ -27,8 +27,8 @@ class ReportInputView: UIView {
   
   fileprivate var placeholder: UILabel = {
     let placeholder = UILabel()
-    placeholder.textColor = UIColor.textColor()
-    placeholder.font = UIFont.fontRegularText()
+    placeholder.textColor = UIColor.colorCode(199, green: 199, blue: 199, alpha: 1.0)
+    placeholder.font = UIFont.fontTitleText()
     placeholder.text = NSLocalizedString("Observatii", comment: "")
     return placeholder
   }()
@@ -49,8 +49,8 @@ class ReportInputView: UIView {
     self.addSubview(textView)
     constrain(textView) { view in
       view.top == view.superview!.top + 10
-      view.leading == view.superview!.leading + 10
-      view.trailing == view.superview!.trailing - 10
+      view.leading == view.superview!.leading + 20
+      view.trailing == view.superview!.trailing - 20
     }
     
     self.addSubview(placeholder)
@@ -65,7 +65,7 @@ class ReportInputView: UIView {
     get {
       let contentSize = self.textView.sizeThatFits(CGSize(width: self.bounds.width - 20, height: CGFloat.infinity))
       let height = contentSize.height + 20
-      return CGSize(width: UIViewNoIntrinsicMetric, height: max(140, height))
+      return CGSize(width: UIViewNoIntrinsicMetric, height: max(100, height))
     }
   }
   

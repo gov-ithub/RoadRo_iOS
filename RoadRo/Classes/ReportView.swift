@@ -45,7 +45,7 @@ class ReportView: UIView {
     return label
   }()
   
-  fileprivate var photoSelector: ReportPhotoSelector = {
+  var photoSelector: ReportPhotoSelector = {
     let view = ReportPhotoSelector()
     return view
   }()
@@ -66,7 +66,6 @@ class ReportView: UIView {
   
   fileprivate var sendView: RoundedButton = {
     let view = RoundedButton()
-//    view.addTarget(self, action: #selector(sendPressed), for: .touchUpInside)
     return view
   }()
   
@@ -172,6 +171,7 @@ class ReportView: UIView {
     }
     
     // Add send button
+    sendView.addTarget(self, action: #selector(sendPressed), for: .touchUpInside)
     scrollView.addSubview(sendView)
     constrain(sendView, commentsView) { view, topView in
       view.top == topView.bottom + 20

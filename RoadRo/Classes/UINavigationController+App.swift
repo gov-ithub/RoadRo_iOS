@@ -20,7 +20,7 @@ extension UINavigationController {
     bar.setBackgroundImage(UIImage(named: "navigationHeaderBig"), for: .default)
     
     let barItem = UIBarButtonItem.appearance()
-    let attributes = [ NSFontAttributeName : UIFont.fontAppRegular(16), NSForegroundColorAttributeName: UIColor.black ]
+    let attributes = [ NSFontAttributeName : UIFont.fontAppRegular(16), NSForegroundColorAttributeName: UIColor.white ]
     barItem.setTitleTextAttributes(attributes, for: UIControlState())
     
     let controler = UISegmentedControl.appearance()

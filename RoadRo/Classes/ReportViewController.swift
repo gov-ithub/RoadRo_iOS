@@ -12,7 +12,7 @@ class ReportViewController: UIViewController {
   
   fileprivate var config: Config
   
-  var onPickImage: ((_ selection : ((_ image : UIImage?) -> Void)?) -> Void)?
+  var onPickImage: ((_ selection : PhotoHandler) -> Void)?
   
   init(config: Config) {
     self.config = config
@@ -31,6 +31,7 @@ class ReportViewController: UIViewController {
   
   override func loadView() {
     let view = ReportView()
+    view.photoSelector.dataSource = self
     view.onSend = {[weak self] in
       self?.sendPressed()
     }
@@ -58,5 +59,12 @@ class ReportViewController: UIViewController {
 //    onPickImage?({(image) -> Void in
 //      print(image)
 //      })
+  }
+}
+
+extension ReportViewController: ReportPhotoSelectorDataSource {
+  
+  func pickImage(completion: PhotoHandler) {
+    self.onPickImage?(completion)
   }
 }
