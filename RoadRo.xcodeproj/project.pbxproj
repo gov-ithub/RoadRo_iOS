@@ -300,6 +300,7 @@
 		5BC820A01DA913F800445B04 /* View controllers */ = {
 			isa = PBXGroup;
 			children = (
+				838250511DAA1EE10033269D /* Intro */,
 				5B4DF4C61DA93431008840D1 /* Signup */,
 				5B4DF4C71DA93439008840D1 /* Report */,
 				5B4DF4CC1DA93617008840D1 /* History */,
@@ -363,6 +364,13 @@
 				5BCF86D71DAA1DA900C928BA /* CommunityViewController.swift */,
 			);
 			name = Community;
+			sourceTree = "<group>";
+		};
+		838250511DAA1EE10033269D /* Intro */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Intro;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
