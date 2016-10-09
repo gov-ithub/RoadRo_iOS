@@ -65,7 +65,7 @@ class ReportView: UIView {
   }()
   
   fileprivate var sendView: RoundedButton = {
-    let title = NSLocalizedString("Trimite reclamație", comment: "")
+    let title = NSLocalizedString("Trimite reclamația", comment: "")
     let view = RoundedButton(title: title)
     return view
   }()
