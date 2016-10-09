@@ -55,7 +55,7 @@ class ReportPhotoSelector: UIView {
     constrain(imageViews[0], imageViews[1], imageViews[2], imageViews[3]) { view1, view2, view3, view4 in
       view1.leading == view1.superview!.leading
       view4.trailing == view4.superview!.trailing
-      distribute(by: 0, horizontally: view1, view2, view3, view4)
+      distribute(by: 1, horizontally: view1, view2, view3, view4)
       
       view1.top == view1.superview!.top
       view1.bottom == view1.superview!.bottom
