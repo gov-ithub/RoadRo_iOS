@@ -19,6 +19,18 @@ class ReportPhotoSelector: UIView {
   
   fileprivate var imageViews: [ReportImageSelectorView] = []
   
+  var images: [UIImage] {
+    get {
+      var images: [UIImage] = []
+      for imageView in self.imageViews {
+        if let image = imageView.image {
+          images.append(image)
+        }
+      }
+      return images
+    }
+  }
+  
   weak var dataSource: ReportPhotoSelectorDataSource?
   
   init() {
@@ -124,6 +136,6 @@ extension ReportPhotoSelector {
       if let image = image {
         self?.appendImage(image: image)
       }
-    })
+      })
   }
 }

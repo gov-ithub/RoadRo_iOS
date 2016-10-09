@@ -10,6 +10,7 @@ import UIKit
 
 class ReportViewController: UIViewController {
   
+  fileprivate var contentView: ReportView { get { return self.view as! ReportView } }
   fileprivate var config: Config
   
   var onPickImage: ((_ selection : PhotoHandler) -> Void)?
@@ -50,12 +51,20 @@ class ReportViewController: UIViewController {
   }
   
   fileprivate func sendPressed() {
-    print("send pressed")
-    //    LocationTracker.instance.getLocationAddress { (address) in
-    //      print(address)
-    //    }
-
-    ActivityIndicator.show()
+    self.view.endEditing(true)
+    
+    let images = self.contentView.images
+    if images.count == 0 {
+      AlertView.show(withMessage: NSLocalizedString("Adauga cel putin o imagine", comment: ""))
+      return
+    }
+    
+    guard let address = self.contentView.address, address.characters.count > 0 else {
+      AlertView.show(withMessage: NSLocalizedString("Adauga adresa incidentului", comment: ""))
+      return
+    }
+    
+//    ActivityIndicator.show()
 //    onPickImage?({(image) -> Void in
 //      print(image)
 //      })

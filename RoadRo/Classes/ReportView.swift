@@ -69,6 +69,9 @@ class ReportView: UIView {
     return view
   }()
   
+  var images: [UIImage] { get { return self.photoSelector.images } }
+  var address: String? { get { return self.addressTextField.text } }
+  var comments: String? { get { return self.commentsView.text } }
   var onSend: (() -> Void)?
   
   init() {

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5B1D28C21DAA297600F34B61 /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1D28C11DAA297600F34B61 /* LineView.swift */; };
 		5B1D28C41DAA308E00F34B61 /* ReportImageSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1D28C31DAA308E00F34B61 /* ReportImageSelectorView.swift */; };
+		5B1D28C61DAA421F00F34B61 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1D28C51DAA421F00F34B61 /* AlertView.swift */; };
+		5B1D28C81DAA42EA00F34B61 /* UIViewController+Presentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1D28C71DAA42EA00F34B61 /* UIViewController+Presentation.swift */; };
 		5B4DF4C91DA93449008840D1 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4DF4C81DA93449008840D1 /* ReportViewController.swift */; };
 		5B4DF4CB1DA93450008840D1 /* ReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4DF4CA1DA93450008840D1 /* ReportView.swift */; };
 		5B4DF4CE1DA93694008840D1 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4DF4CD1DA93694008840D1 /* Settings.swift */; };
@@ -71,6 +73,8 @@
 /* Begin PBXFileReference section */
 		5B1D28C11DAA297600F34B61 /* LineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
 		5B1D28C31DAA308E00F34B61 /* ReportImageSelectorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportImageSelectorView.swift; sourceTree = "<group>"; };
+		5B1D28C51DAA421F00F34B61 /* AlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		5B1D28C71DAA42EA00F34B61 /* UIViewController+Presentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Presentation.swift"; sourceTree = "<group>"; };
 		5B4DF4C81DA93449008840D1 /* ReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
 		5B4DF4CA1DA93450008840D1 /* ReportView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportView.swift; sourceTree = "<group>"; };
 		5B4DF4CD1DA93694008840D1 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
@@ -333,6 +337,8 @@
 		5BC820A21DA9141B00445B04 /* Custom view */ = {
 			isa = PBXGroup;
 			children = (
+				5B1D28C71DAA42EA00F34B61 /* UIViewController+Presentation.swift */,
+				5B1D28C51DAA421F00F34B61 /* AlertView.swift */,
 				5B89EB811DA9953000779243 /* ActivityIndicator.swift */,
 				5BCF86D01DAA156000C928BA /* TableView.swift */,
 				5BCF86D21DAA175900C928BA /* TableContentMessageView.swift */,
@@ -507,6 +513,7 @@
 				5B1D28C41DAA308E00F34B61 /* ReportImageSelectorView.swift in Sources */,
 				5BCF86D31DAA175900C928BA /* TableContentMessageView.swift in Sources */,
 				5BC820911DA9131E00445B04 /* Config+Keys.swift in Sources */,
+				5B1D28C81DAA42EA00F34B61 /* UIViewController+Presentation.swift in Sources */,
 				5BC820D41DA91DED00445B04 /* Logging.swift in Sources */,
 				5B89EB861DA9964000779243 /* HistoryView.swift in Sources */,
 				5B4DF4E01DA96990008840D1 /* CellConfigurator.swift in Sources */,
@@ -539,6 +546,7 @@
 				5B4DF4EF1DA970AE008840D1 /* KeyboardHandler.swift in Sources */,
 				5BCF86D51DAA1A9E00C928BA /* UIView+Drowing.swift in Sources */,
 				5B89EB801DA98C6500779243 /* FlowController+ImagePicker.swift in Sources */,
+				5B1D28C61DAA421F00F34B61 /* AlertView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
