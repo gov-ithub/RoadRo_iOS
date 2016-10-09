@@ -10,10 +10,9 @@ import UIKit
 
 extension FlowController {
   
-  internal func push(controller: UIViewController) {
-    if let currentNavController = controller.navigationController {
-      self.pushController(controller, navigationController: currentNavController)
-    }
+  //TODO: needs refactoring
+  internal func push(controller: UIViewController, from navController: UINavigationController) {
+    self.pushController(controller, navigationController: navController)
   }
   
   internal func pop(controller: UIViewController, animated: Bool) {
@@ -34,6 +33,18 @@ extension FlowController {
   
   //MARK: Navigation
   fileprivate func pushController(_ controller: UIViewController, navigationController: UINavigationController) {
+    
+    // Setup navigation appear handlers
+    if let flowBaseController = controller as? FlowBaseViewController {
+      flowBaseController.willAppearHandler = {animated in
+        navigationController.setNavigationBarHidden(false, animated: animated)
+      }
+      flowBaseController.willDisappearHandler = {animated in
+        if let _ = navigationController.topViewController as? IntroViewController {
+          navigationController.setNavigationBarHidden(true, animated: animated)
+        }
+      }
+    }
     
     // Push in navigation
     navigationController.pushViewController(controller, animated: true)

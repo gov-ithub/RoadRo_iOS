@@ -50,6 +50,5 @@ class SignupView: UIView {
       view.height == 40
       view.centerY == view.superview!.centerY
     }
-    textField.becomeFirstResponder()
   }
 }

@@ -31,7 +31,7 @@ class FlowController : NSObject, UIGestureRecognizerDelegate {
     if self.config.isLoggedIn {
       controller = self.createMainController()
     } else {
-      controller = self.createSignupController()
+      controller = self.createIntroController()
     }
     return controller
   }
@@ -50,6 +50,24 @@ class FlowController : NSObject, UIGestureRecognizerDelegate {
     ]
     return tabController
   }
+  
+  fileprivate func createIntroController() -> UIViewController {
+    let controller = IntroViewController()
+
+    controller.onContinue = { [weak self] in
+      self?.showSignupController(from: controller.navigationController!)
+    }
+    
+    let navController = UINavigationController(rootViewController: controller)
+    navController.isNavigationBarHidden = true
+    return navController
+  }
+  
+  func showSignupController(from navController: UINavigationController) {
+    let controller = self.createSignupController()
+    self.push(controller: controller, from: navController)
+  }
+  
   
   fileprivate func createReportController() -> UIViewController {
     let controller = ReportViewController(config: config)
@@ -82,8 +100,6 @@ class FlowController : NSObject, UIGestureRecognizerDelegate {
     controller.didSignup = {[weak self] in
       self?.resetControllers()
     }
-    
-    let navController = UINavigationController(rootViewController: controller)
-    return navController
+    return controller
   }
 }

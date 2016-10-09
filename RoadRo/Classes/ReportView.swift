@@ -12,7 +12,7 @@ import Cartography
 class ReportView: UIView {
   
   fileprivate let keyboardHandler = KeyboardHandler()
-
+  
   fileprivate var scrollView: UIScrollView = {
     let scrollView = UIScrollView()
     scrollView.backgroundColor = UIColor.white
@@ -65,7 +65,8 @@ class ReportView: UIView {
   }()
   
   fileprivate var sendView: RoundedButton = {
-    let view = RoundedButton()
+    let title = NSLocalizedString("Trimite reclamatie", comment: "")
+    let view = RoundedButton(title: title)
     return view
   }()
   

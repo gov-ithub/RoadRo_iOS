@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SignupViewController: UIViewController {
+class SignupViewController: FlowBaseViewController {
   
   fileprivate var contentView: SignupView { get { return self.view as! SignupView } }
   fileprivate var config: Config
@@ -26,7 +26,7 @@ class SignupViewController: UIViewController {
   
   init(config: Config) {
     self.config = config
-    super.init(nibName: nil, bundle: nil)
+    super.init()
     self.title = NSLocalizedString("Inregistrare", comment: "Inregistrare")
   }
   
@@ -42,10 +42,11 @@ class SignupViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     self.navigationItem.rightBarButtonItem = sendButton
+    self.navigationItem.hidesBackButton = true
   }
   
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
     self.contentView.textField.becomeFirstResponder()
   }
   
