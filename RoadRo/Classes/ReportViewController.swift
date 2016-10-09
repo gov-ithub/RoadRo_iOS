@@ -33,6 +33,9 @@ class ReportViewController: UIViewController {
   override func loadView() {
     let view = ReportView()
     view.photoSelector.dataSource = self
+    view.onLocateMe = {[weak self] in
+      self?.locateMe()
+    }
     view.onSend = {[weak self] in
       self?.sendPressed()
     }
@@ -62,6 +65,12 @@ class ReportViewController: UIViewController {
     guard let address = self.contentView.address, address.characters.count > 0 else {
       AlertView.show(withMessage: NSLocalizedString("Adaugă adresa incidentului", comment: ""))
       return
+    }
+  }
+  
+  fileprivate func locateMe() {
+    LocationTracker.instance.getLocationAddress {[weak self] (address) in
+      self?.contentView.address = address
     }
   }
 }

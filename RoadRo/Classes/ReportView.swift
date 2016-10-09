@@ -50,6 +50,12 @@ class ReportView: UIView {
     return view
   }()
   
+  fileprivate var locationButton: UIButton = {
+    let button = UIButton(type: .custom)
+    button.setImage(UIImage(named: "getLocation"), for: .normal)
+    return button
+  }()
+  
   fileprivate var addressTextField: UITextField = {
     let label = UITextField()
     label.font = UIFont.fontTitleText()
@@ -71,9 +77,18 @@ class ReportView: UIView {
   }()
   
   var images: [UIImage] { get { return self.photoSelector.images } }
-  var address: String? { get { return self.addressTextField.text } }
+  var address: String? {
+    get {
+      return self.addressTextField.text
+    }
+    set {
+      self.addressTextField.text = newValue
+    }
+  }
   var comments: String? { get { return self.commentsView.text } }
+  
   var onSend: (() -> Void)?
+  var onLocateMe: (() -> Void)?
   
   init() {
     super.init(frame: CGRect.zero)
@@ -149,11 +164,18 @@ class ReportView: UIView {
     }
     
     // Add address textfield
+    locationButton.addTarget(self, action: #selector(locatePressed), for: .touchUpInside)
+    scrollView.addSubview(locationButton)
     scrollView.addSubview(addressTextField)
-    constrain(addressTextField, separator2) { view, topView in
+    constrain(addressTextField, locationButton, separator2) { view, button, topView in
+      button.width == 30
+      button.height == 30
+      button.trailing == view.superview!.trailing - 20
+      button.centerY == view.centerY
+      
       view.top == topView.bottom + 10
       view.leading == view.superview!.leading + 20
-      view.trailing == view.superview!.trailing - 20
+      view.trailing == button.leading - 20
       view.height == 34
     }
     
@@ -197,5 +219,9 @@ class ReportView: UIView {
   
   @objc private func sendPressed() {
     onSend?()
+  }
+  
+  @objc private func locatePressed() {
+    onLocateMe?()
   }
 }

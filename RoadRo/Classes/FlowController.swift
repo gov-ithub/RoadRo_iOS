@@ -71,7 +71,7 @@ class FlowController : NSObject, UIGestureRecognizerDelegate {
   
   fileprivate func createReportController() -> UIViewController {
     let controller = ReportViewController(config: config)
-    let navController = UINavigationController(rootViewController: controller)
+    let navController = PortraitNavigationController(rootViewController: controller)
     
     controller.onPickImage = {[weak self] (selection: ((_ image : UIImage?) -> Void)?) in
       if let controller = controller.navigationController {
