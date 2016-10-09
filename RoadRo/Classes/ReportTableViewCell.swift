@@ -22,7 +22,6 @@ class ReportTableViewCell: UITableViewCell {
   }
   
   private func setup() {
-    
   }
   
   func configure(model: ReportViewModel) {
