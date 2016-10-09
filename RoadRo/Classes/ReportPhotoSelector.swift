@@ -76,6 +76,13 @@ class ReportPhotoSelector: UIView {
     self.updatePhotoSelectorViews()
   }
   
+  func resetUI() {
+    for imageView in self.imageViews {
+      imageView.image = nil
+    }
+    self.updatePhotoSelectorViews()
+  }
+  
   override var intrinsicContentSize: CGSize {
     let height = self.bounds.width / 4
     return CGSize(width: UIViewNoIntrinsicMetric, height: height)

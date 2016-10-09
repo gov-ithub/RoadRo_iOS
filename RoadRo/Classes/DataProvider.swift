@@ -19,10 +19,12 @@ protocol DataProviderAuthorizationDataSource {
 
 enum ApiPath {
   case Register
+  case Tickets
   
   func path() -> String {
     switch self {
     case .Register: return "/v0/users/register/"
+    case .Tickets: return "/v0/tickets/"
     }
   }
 }

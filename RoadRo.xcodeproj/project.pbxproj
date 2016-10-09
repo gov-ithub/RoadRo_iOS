@@ -15,6 +15,8 @@
 		5B1D28CE1DAA639200F34B61 /* NSFileManager+Dir.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1D28CD1DAA639200F34B61 /* NSFileManager+Dir.swift */; };
 		5B1D28D21DAA64DE00F34B61 /* ReportCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1D28D11DAA64DE00F34B61 /* ReportCardView.swift */; };
 		5B1D28D41DAA6BF900F34B61 /* ReportStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1D28D31DAA6BF900F34B61 /* ReportStatusView.swift */; };
+		5B1D28D61DAA765500F34B61 /* DataProvider+Reports.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1D28D51DAA765500F34B61 /* DataProvider+Reports.swift */; };
+		5B1D28D81DAA782300F34B61 /* UIImage+Resizing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1D28D71DAA782300F34B61 /* UIImage+Resizing.swift */; };
 		5B4DF4C91DA93449008840D1 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4DF4C81DA93449008840D1 /* ReportViewController.swift */; };
 		5B4DF4CB1DA93450008840D1 /* ReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4DF4CA1DA93450008840D1 /* ReportView.swift */; };
 		5B4DF4CE1DA93694008840D1 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4DF4CD1DA93694008840D1 /* Settings.swift */; };
@@ -85,6 +87,8 @@
 		5B1D28CD1DAA639200F34B61 /* NSFileManager+Dir.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSFileManager+Dir.swift"; sourceTree = "<group>"; };
 		5B1D28D11DAA64DE00F34B61 /* ReportCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportCardView.swift; sourceTree = "<group>"; };
 		5B1D28D31DAA6BF900F34B61 /* ReportStatusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportStatusView.swift; sourceTree = "<group>"; };
+		5B1D28D51DAA765500F34B61 /* DataProvider+Reports.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DataProvider+Reports.swift"; sourceTree = "<group>"; };
+		5B1D28D71DAA782300F34B61 /* UIImage+Resizing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Resizing.swift"; sourceTree = "<group>"; };
 		5B4DF4C81DA93449008840D1 /* ReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
 		5B4DF4CA1DA93450008840D1 /* ReportView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportView.swift; sourceTree = "<group>"; };
 		5B4DF4CD1DA93694008840D1 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
@@ -211,6 +215,7 @@
 		5B4DF4D11DA9383A008840D1 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				5B1D28D71DAA782300F34B61 /* UIImage+Resizing.swift */,
 				5BC820D11DA91DC300445B04 /* Request+Cancelable.swift */,
 				5BCF86D41DAA1A9E00C928BA /* UIView+Drowing.swift */,
 				5BC820D31DA91DED00445B04 /* Logging.swift */,
@@ -395,6 +400,7 @@
 				5BC820B31DA919C900445B04 /* DataProvider.swift */,
 				5BC820BC1DA91AF300445B04 /* DataProvider+Network.swift */,
 				5BC820BE1DA91AF700445B04 /* DataProvider+Account.swift */,
+				5B1D28D51DAA765500F34B61 /* DataProvider+Reports.swift */,
 			);
 			name = DataProvider;
 			sourceTree = "<group>";
@@ -553,10 +559,12 @@
 				5BC820D41DA91DED00445B04 /* Logging.swift in Sources */,
 				5B1D28D41DAA6BF900F34B61 /* ReportStatusView.swift in Sources */,
 				5B89EB861DA9964000779243 /* HistoryView.swift in Sources */,
+				5B1D28D81DAA782300F34B61 /* UIImage+Resizing.swift in Sources */,
 				5B4DF4E01DA96990008840D1 /* CellConfigurator.swift in Sources */,
 				5B1D28D21DAA64DE00F34B61 /* ReportCardView.swift in Sources */,
 				5B1D28CC1DAA573C00F34B61 /* FlowBaseViewController.swift in Sources */,
 				5B4DF4DE1DA96990008840D1 /* ObjectsTableViewDataSource.swift in Sources */,
+				5B1D28D61DAA765500F34B61 /* DataProvider+Reports.swift in Sources */,
 				5BC820B41DA919C900445B04 /* DataProvider.swift in Sources */,
 				5BC820BF1DA91AF700445B04 /* DataProvider+Account.swift in Sources */,
 				5BC8209E1DA913F300445B04 /* FlowController.swift in Sources */,

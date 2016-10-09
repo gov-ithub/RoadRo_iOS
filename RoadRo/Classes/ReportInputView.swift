@@ -33,7 +33,14 @@ class ReportInputView: UIView {
     return placeholder
   }()
   
-  var text: String { get { return textView.text } }
+  var text: String {
+    get {
+      return textView.text
+    }
+    set {
+      self.textView.text = newValue
+    }
+  }
   
   init() {
     super.init(frame: CGRect.zero)

@@ -42,11 +42,16 @@ extension DataProvider {
     }
   }
   
-  func performRequest(method: Alamofire.HTTPMethod, path: String, params: [String: String]?, completionHandler: DataResponseHandler?) -> Cancelable? {
+  func performRequest(method: Alamofire.HTTPMethod, path: String, params: [String: Any]?, completionHandler: DataResponseHandler?) -> Cancelable? {
     
     var url = path
     if !url.hasPrefix("http") {
       url = self.kNetworkApiURL + path
+    }
+    
+    var params = params
+    if let access_token = self.authorizationDataSource?.dataProviderAccessToken() {
+      params?["access_token"] = access_token
     }
     
     DLog(object: "API URL: \(url)")

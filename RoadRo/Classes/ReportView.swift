@@ -206,6 +206,12 @@ class ReportView: UIView {
     }
   }
   
+  func resetUI() {
+    self.addressTextField.text = ""
+    self.commentsView.text = ""
+    self.photoSelector.resetUI()
+  }
+  
   override func layoutSubviews() {
     super.layoutSubviews()
     self.scrollViewContentWidthConstraint.constant = self.bounds.width

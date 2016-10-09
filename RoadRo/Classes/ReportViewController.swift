@@ -70,6 +70,23 @@ class ReportViewController: UIViewController {
       AlertView.show(withMessage: NSLocalizedString("Adaugă adresa incidentului", comment: ""))
       return
     }
+    let comments = self.contentView.comments ?? ""
+    
+    ActivityIndicator.show()
+    self.config.dataProvider.doReport(images: images, address: address, comment: comments, lat: 0.0, long: 0.0) {[weak self] (_, error) in
+      ActivityIndicator.hide()
+      
+      if let error = error {
+        AlertView.show(withMessage: error)
+        return
+      }
+      
+      // Show thank you message
+      AlertView.show(withMessage: "Multumim! Sesizarea ta a fost salvata.")
+      
+      // Reset UI
+      self?.contentView.resetUI()
+    }
   }
   
   fileprivate func locateMe() {

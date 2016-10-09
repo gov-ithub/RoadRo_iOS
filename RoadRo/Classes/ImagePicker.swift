@@ -63,7 +63,9 @@ class ImagePicker : NSObject, UINavigationControllerDelegate, UIImagePickerContr
         image = info[UIImagePickerControllerOriginalImage] as? UIImage;
       }
       
-      self.completion?(image)
+      if let image = image?.imageByScaling(toSize: CGSize(width: 600, height: 600)) {
+        self.completion?(image)
+      }
       self.imagePickerController?.dismiss(animated: true, completion: nil)
     }
   }
