@@ -20,7 +20,7 @@ class ReportViewController: UIViewController {
     self.config = config
     super.init(nibName: nil, bundle: nil)
     
-    self.title = NSLocalizedString("Sesizare", comment: "")
+    self.title = NSLocalizedString("Sesizare nouă", comment: "")
     self.tabBarItem = UITabBarItem(
       title: NSLocalizedString("Sesizare", comment: ""),
       image: UIImage(named: "raportDisabled"),

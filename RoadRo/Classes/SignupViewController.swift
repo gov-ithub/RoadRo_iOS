@@ -47,7 +47,7 @@ class SignupViewController: FlowBaseViewController {
     guard let phoneNumber = self.contentView.phoneNumber else {
       return
     }
-    
+
     // Call register api
     ActivityIndicator.show()
     self.config.dataProvider.doRegister(phone: phoneNumber) {[weak self] (result, error) in
