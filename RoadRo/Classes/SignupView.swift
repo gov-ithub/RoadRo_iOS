@@ -14,7 +14,7 @@ class SignupView: UIView {
   fileprivate var titleLabel: UILabel = {
     let label = UILabel()
     label.font = UIFont.fontRegularText()
-    label.text = NSLocalizedString("Introduceti numarul de telefon pentru\ncrearea unui cont", comment: "")
+    label.text = NSLocalizedString("Introduceți numărul de telefon pentru\ncrearea unui cont", comment: "")
     label.textColor = UIColor.textColorHighlighted()
     label.textAlignment = .center
     label.numberOfLines = 2

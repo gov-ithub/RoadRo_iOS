@@ -39,7 +39,7 @@ class IntroView: UIView {
     label.textColor = UIColor.white
     label.font = UIFont.fontAppRegular(15)
     label.textAlignment = .center
-    label.text = NSLocalizedString("Bine ați venit! Aplicația vă va ajuta să raportați în mod direct parcările ilegale pe care le observați.",
+    label.text = NSLocalizedString("Bine ai venit! Aplicația te va ajuta să trimiți sesizări în mod direct pentru parcările ilegale pe care le observi.",
                                    comment: "Descriere aplicațsie")
     return label
   } ()
