@@ -29,7 +29,7 @@ class ReportInputView: UIView {
     let placeholder = UILabel()
     placeholder.textColor = UIColor.colorCode(199, green: 199, blue: 199, alpha: 1.0)
     placeholder.font = UIFont.fontTitleText()
-    placeholder.text = NSLocalizedString("Observatii", comment: "")
+    placeholder.text = NSLocalizedString("Observații", comment: "")
     return placeholder
   }()
   

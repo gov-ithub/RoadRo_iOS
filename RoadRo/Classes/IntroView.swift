@@ -39,13 +39,13 @@ class IntroView: UIView {
     label.textColor = UIColor.white
     label.font = UIFont.fontAppRegular(15)
     label.textAlignment = .center
-    label.text = NSLocalizedString("Bine ati venit! Aplicatia va va ajuta sa raportati in mod direct parcarile ilegale pe care le observati.",
-                                   comment: "Descriere aplicatie")
+    label.text = NSLocalizedString("Bine ați venit! Aplicația vă va ajuta să raportați în mod direct parcările ilegale pe care le observați.",
+                                   comment: "Descriere aplicațsie")
     return label
   } ()
   
   let button: RoundedButton = {
-    let title = NSLocalizedString("Continua", comment: "Titlu uton")
+    let title = NSLocalizedString("Continuă", comment: "Titlu buton")
     let button = RoundedButton(title: title, titleColor: UIColor.brandColor() , backgroundColor: .white)
     return button
   }()

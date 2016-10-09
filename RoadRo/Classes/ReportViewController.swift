@@ -19,9 +19,9 @@ class ReportViewController: UIViewController {
     self.config = config
     super.init(nibName: nil, bundle: nil)
     
-    self.title = NSLocalizedString("Reclamatie", comment: "")
+    self.title = NSLocalizedString("Reclamație", comment: "")
     self.tabBarItem = UITabBarItem(
-      title: NSLocalizedString("Reclamatie", comment: ""),
+      title: NSLocalizedString("Reclamație", comment: ""),
       image: UIImage(named: "raportDisabled"),
       selectedImage: UIImage(named: "raportEnabled"))
   }
@@ -58,12 +58,12 @@ class ReportViewController: UIViewController {
     
     let images = self.contentView.images
     if images.count == 0 {
-      AlertView.show(withMessage: NSLocalizedString("Adauga cel putin o imagine", comment: ""))
+      AlertView.show(withMessage: NSLocalizedString("Adaugă cel puțin o imagine", comment: ""))
       return
     }
     
     guard let address = self.contentView.address, address.characters.count > 0 else {
-      AlertView.show(withMessage: NSLocalizedString("Adauga adresa incidentului", comment: ""))
+      AlertView.show(withMessage: NSLocalizedString("Adaugă adresa incidentului", comment: ""))
       return
     }
   }
