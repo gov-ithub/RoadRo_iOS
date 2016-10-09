@@ -12,6 +12,9 @@
 		5B1D28C61DAA421F00F34B61 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1D28C51DAA421F00F34B61 /* AlertView.swift */; };
 		5B1D28C81DAA42EA00F34B61 /* UIViewController+Presentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1D28C71DAA42EA00F34B61 /* UIViewController+Presentation.swift */; };
 		5B1D28CC1DAA573C00F34B61 /* FlowBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1D28CB1DAA573C00F34B61 /* FlowBaseViewController.swift */; };
+		5B1D28CE1DAA639200F34B61 /* NSFileManager+Dir.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1D28CD1DAA639200F34B61 /* NSFileManager+Dir.swift */; };
+		5B1D28D21DAA64DE00F34B61 /* ReportCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1D28D11DAA64DE00F34B61 /* ReportCardView.swift */; };
+		5B1D28D41DAA6BF900F34B61 /* ReportStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1D28D31DAA6BF900F34B61 /* ReportStatusView.swift */; };
 		5B4DF4C91DA93449008840D1 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4DF4C81DA93449008840D1 /* ReportViewController.swift */; };
 		5B4DF4CB1DA93450008840D1 /* ReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4DF4CA1DA93450008840D1 /* ReportView.swift */; };
 		5B4DF4CE1DA93694008840D1 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4DF4CD1DA93694008840D1 /* Settings.swift */; };
@@ -79,6 +82,9 @@
 		5B1D28C51DAA421F00F34B61 /* AlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		5B1D28C71DAA42EA00F34B61 /* UIViewController+Presentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Presentation.swift"; sourceTree = "<group>"; };
 		5B1D28CB1DAA573C00F34B61 /* FlowBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowBaseViewController.swift; sourceTree = "<group>"; };
+		5B1D28CD1DAA639200F34B61 /* NSFileManager+Dir.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSFileManager+Dir.swift"; sourceTree = "<group>"; };
+		5B1D28D11DAA64DE00F34B61 /* ReportCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportCardView.swift; sourceTree = "<group>"; };
+		5B1D28D31DAA6BF900F34B61 /* ReportStatusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportStatusView.swift; sourceTree = "<group>"; };
 		5B4DF4C81DA93449008840D1 /* ReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
 		5B4DF4CA1DA93450008840D1 /* ReportView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportView.swift; sourceTree = "<group>"; };
 		5B4DF4CD1DA93694008840D1 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
@@ -160,6 +166,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B1D28D01DAA64D300F34B61 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5B89EB891DA9982E00779243 /* ReportTableViewCell.swift */,
+				5B1D28D11DAA64DE00F34B61 /* ReportCardView.swift */,
+				5B1D28D31DAA6BF900F34B61 /* ReportStatusView.swift */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
 		5B4DF4C61DA93431008840D1 /* Signup */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,7 +203,7 @@
 				5B89EB831DA9962800779243 /* HistoryViewController.swift */,
 				5B89EB851DA9964000779243 /* HistoryView.swift */,
 				5B89EB871DA996D800779243 /* HistoryDataProvider.swift */,
-				5B89EB891DA9982E00779243 /* ReportTableViewCell.swift */,
+				5B1D28D01DAA64D300F34B61 /* Cell */,
 			);
 			name = History;
 			sourceTree = "<group>";
@@ -345,6 +361,7 @@
 		5BC820A21DA9141B00445B04 /* Custom view */ = {
 			isa = PBXGroup;
 			children = (
+				5B1D28CD1DAA639200F34B61 /* NSFileManager+Dir.swift */,
 				5B1D28C71DAA42EA00F34B61 /* UIViewController+Presentation.swift */,
 				5B1D28C51DAA421F00F34B61 /* AlertView.swift */,
 				5B89EB811DA9953000779243 /* ActivityIndicator.swift */,
@@ -534,8 +551,10 @@
 				5BC820911DA9131E00445B04 /* Config+Keys.swift in Sources */,
 				5B1D28C81DAA42EA00F34B61 /* UIViewController+Presentation.swift in Sources */,
 				5BC820D41DA91DED00445B04 /* Logging.swift in Sources */,
+				5B1D28D41DAA6BF900F34B61 /* ReportStatusView.swift in Sources */,
 				5B89EB861DA9964000779243 /* HistoryView.swift in Sources */,
 				5B4DF4E01DA96990008840D1 /* CellConfigurator.swift in Sources */,
+				5B1D28D21DAA64DE00F34B61 /* ReportCardView.swift in Sources */,
 				5B1D28CC1DAA573C00F34B61 /* FlowBaseViewController.swift in Sources */,
 				5B4DF4DE1DA96990008840D1 /* ObjectsTableViewDataSource.swift in Sources */,
 				5BC820B41DA919C900445B04 /* DataProvider.swift in Sources */,
@@ -552,6 +571,7 @@
 				5B4DF4CE1DA93694008840D1 /* Settings.swift in Sources */,
 				5B1D28C21DAA297600F34B61 /* LineView.swift in Sources */,
 				5BC820C61DA91CFB00445B04 /* SignupView.swift in Sources */,
+				5B1D28CE1DAA639200F34B61 /* NSFileManager+Dir.swift in Sources */,
 				5BCF86D11DAA156000C928BA /* TableView.swift in Sources */,
 				5B89EB841DA9962800779243 /* HistoryViewController.swift in Sources */,
 				5B89EB8A1DA9982E00779243 /* ReportTableViewCell.swift in Sources */,

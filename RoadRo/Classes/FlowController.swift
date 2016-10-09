@@ -37,7 +37,7 @@ class FlowController : NSObject, UIGestureRecognizerDelegate {
   }
   
   fileprivate func resetControllers() {
-    window.rootViewController = self.createMainController()
+    window.rootViewController = self.rootController()
   }
   
   fileprivate func createMainController() -> UIViewController {
@@ -71,8 +71,10 @@ class FlowController : NSObject, UIGestureRecognizerDelegate {
   
   fileprivate func createReportController() -> UIViewController {
     let controller = ReportViewController(config: config)
-    let navController = PortraitNavigationController(rootViewController: controller)
-    
+    controller.onLogout = {[weak self] in
+      self?.config.clearUserData()
+      self?.resetControllers()
+    }
     controller.onPickImage = {[weak self] (selection: ((_ image : UIImage?) -> Void)?) in
       if let controller = controller.navigationController {
         self?.showImagePicker(from: controller, withCompletion: { (image) in
@@ -80,6 +82,8 @@ class FlowController : NSObject, UIGestureRecognizerDelegate {
         })
       }
     }
+    
+    let navController = PortraitNavigationController(rootViewController: controller)
     return navController
   }
   

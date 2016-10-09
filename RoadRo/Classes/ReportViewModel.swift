@@ -8,21 +8,25 @@
 
 import Foundation
 
-public class ReportViewModel: NSObject {
+class ReportViewModel: NSObject {
   
-  public var id: String!
-  public var address: String?
-  public var lat: Double
-  public var long: Double
-  public var comments: String?
-  public var likes: Int = 0
+  var id: String!
+  var address: String?
+  var lat: Double
+  var long: Double
+  var comments: String?
+  var likes: Int = 0
+  var status: ReportStatus!
   
-  public init(data: DataReport) {
+  init(data: DataReport) {
     self.id = data.id
     self.address = data.address
     self.lat = data.lat
     self.long = data.long
     self.comments = data.comments
     self.likes = data.likes
+    
+    let status = ReportStatus(rawValue: data.status)
+    self.status = status
   }
 }

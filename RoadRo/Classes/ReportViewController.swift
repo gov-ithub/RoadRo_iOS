@@ -14,6 +14,7 @@ class ReportViewController: UIViewController {
   fileprivate var config: Config
   
   var onPickImage: ((_ selection : PhotoHandler) -> Void)?
+  var onLogout: (() -> Void)?
   
   init(config: Config) {
     self.config = config
@@ -45,6 +46,9 @@ class ReportViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
+    let item = UIBarButtonItem(title: "Logout", style: .done, target: self, action: #selector(logoutPressed))
+    self.navigationItem.leftBarButtonItem = item
+    
     // Start tracker
     do {
       try LocationTracker.instance.startTracker()
@@ -72,6 +76,10 @@ class ReportViewController: UIViewController {
     LocationTracker.instance.getLocationAddress {[weak self] (address) in
       self?.contentView.address = address
     }
+  }
+  
+  @objc fileprivate func logoutPressed() {
+    onLogout?()
   }
 }
 

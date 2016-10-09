@@ -44,6 +44,9 @@ class HistoryViewController: UIViewController {
     
     // Data source
     self.setupDatasource()
+    
+    // Prefill
+    self.prefillWithData()
   }
   
   fileprivate func setupDatasource() {
@@ -62,8 +65,9 @@ class HistoryViewController: UIViewController {
     
     let delegate = ObjectsTableViewDelegate<ReportTableViewCell>(
       tableView: self.contentView.tableView,
-      heightConfiguration: {(indexPath, width) -> CGFloat in
-        return 60
+      heightConfiguration: {[weak self] (indexPath, width) -> CGFloat in
+        let object = self?.dataProvider.objectAtIndexPath(indexPath: indexPath) as! ReportViewModel
+        return ReportTableViewCell.desiredHeight(withModel: object, width: width)
       })
     delegate.selectionHandler = {[weak self] indexPath in
       if let object = self?.dataProvider.objectAtIndexPath(indexPath: indexPath) as? ReportViewModel {
@@ -85,5 +89,25 @@ class HistoryViewController: UIViewController {
     print("do refresh")
     
     self.contentView.tableView.endRefreshing(animated: true)
+  }
+}
+
+extension HistoryViewController {
+  
+  //TODO: remove
+  fileprivate func prefillWithData() {
+    let realm = self.config.dataStore.realm!
+    if realm.objects(DataReport.self).count > 0 {
+      return
+    }
+    
+    try! realm.write {
+      for i in 0..<20 {
+        let data = DataReport()
+        data.id = "\(i)"
+        data.status = i % 3
+        realm.add(data)
+      }
+    }
   }
 }

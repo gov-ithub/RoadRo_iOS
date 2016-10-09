@@ -18,6 +18,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     
+    #if DEBUG
+      // Print Documents dir
+      let documentsDir = FileManager.documentsDir()
+      DLog(object: documentsDir)
+    #endif
+    
     // Init flow manager
     self.flowController = FlowController(config: self.config, window: self.window!)
     
