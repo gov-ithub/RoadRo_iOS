@@ -46,7 +46,7 @@ class FlowController : NSObject, UIGestureRecognizerDelegate {
     tabController.viewControllers = [
       self.createReportController(),
       self.createHistoryController(),
-      self.createReportController()
+      self.createCommunityController()
     ]
     return tabController
   }
@@ -67,6 +67,12 @@ class FlowController : NSObject, UIGestureRecognizerDelegate {
   
   fileprivate func createHistoryController() -> UIViewController {
     let controller = HistoryViewController(config: config)
+    let navController = UINavigationController(rootViewController: controller)
+    return navController
+  }
+  
+  fileprivate func createCommunityController() -> UIViewController {
+    let controller = CommunityViewController(config: config)
     let navController = UINavigationController(rootViewController: controller)
     return navController
   }

@@ -27,10 +27,14 @@ extension UIColor {
   }
   
   class func textColor() -> UIColor {
-    return UIColor.colorCode(81, green: 81, blue: 81, alpha: 1.0)
+    return UIColor.colorCode(95, green: 95, blue: 95, alpha: 1.0)
   }
   
   class func textColorHighlighted() -> UIColor {
-    return UIColor.colorCode(81, green: 81, blue: 81, alpha: 0.6)
+    return UIColor.colorCode(0, green: 114, blue: 185, alpha: 1.0)
+  }
+  
+  class func separatorColor() -> UIColor {
+    return UIColor.colorCode(216, green: 216, blue: 216, alpha: 0.6)
   }
 }

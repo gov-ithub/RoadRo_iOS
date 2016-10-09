@@ -27,10 +27,20 @@ class ReportView: UIView {
   
   fileprivate var scrollViewContentWidthConstraint : NSLayoutConstraint!
   
-  fileprivate var photoTitleLabel: UILabel = {
+  fileprivate var titleLabel: UILabel = {
     let label = UILabel()
     label.font = UIFont.fontRegularText()
-    label.text = NSLocalizedString("Adaugata o imagine", comment: "")
+    label.text = NSLocalizedString("Pentru a ne trimite o reclamatie, va rugam sa\ncompletati formularul de mai jos", comment: "")
+    label.textColor = UIColor.textColorHighlighted()
+    label.textAlignment = .center
+    label.numberOfLines = 0
+    return label
+  }()
+  
+  fileprivate var photoTitleLabel: UILabel = {
+    let label = UILabel()
+    label.font = UIFont.fontTitleText()
+    label.text = NSLocalizedString("Imagini de la locul incidentului", comment: "")
     label.textColor = UIColor.textColor()
     return label
   }()
@@ -42,14 +52,10 @@ class ReportView: UIView {
   
   fileprivate var addressTextField: UITextField = {
     let label = UITextField()
-    label.font = UIFont.fontRegularText()
+    label.font = UIFont.fontTitleText()
     label.textColor = UIColor.textColor()
     label.placeholder = NSLocalizedString("Adresa", comment: "")
     label.backgroundColor = UIColor.white
-    label.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 1))
-    label.leftViewMode = .always
-    label.rightView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 1))
-    label.rightViewMode = .always
     return label
   }()
   
@@ -57,6 +63,14 @@ class ReportView: UIView {
     let view = ReportInputView()
     return view
   }()
+  
+  fileprivate var sendView: RoundedButton = {
+    let view = RoundedButton()
+//    view.addTarget(self, action: #selector(sendPressed), for: .touchUpInside)
+    return view
+  }()
+  
+  var onSend: (() -> Void)?
   
   init() {
     super.init(frame: CGRect.zero)
@@ -90,9 +104,26 @@ class ReportView: UIView {
     }
     
     // Add photo label
+    scrollView.addSubview(titleLabel)
+    constrain(titleLabel) { view in
+      view.top == view.superview!.top + 30
+      view.leading == view.superview!.leading + 20
+      view.trailing == view.superview!.trailing - 20
+    }
+    
+    // Add separator
+    let separator1 = LineView()
+    scrollView.addSubview(separator1)
+    constrain(separator1, titleLabel) { view, topView in
+      view.top == topView.bottom + 30
+      view.leading == view.superview!.leading
+      view.trailing == view.superview!.trailing
+    }
+    
+    // Add photo label
     scrollView.addSubview(photoTitleLabel)
-    constrain(photoTitleLabel) { view in
-      view.top == view.superview!.top + 20
+    constrain(photoTitleLabel, separator1) { view, topView in
+      view.top == topView.bottom + 10
       view.leading == view.superview!.leading + 20
       view.trailing == view.superview!.trailing - 20
     }
@@ -100,6 +131,15 @@ class ReportView: UIView {
     // Add photo selector view
     scrollView.addSubview(photoSelector)
     constrain(photoSelector, photoTitleLabel) { view, topView in
+      view.top == topView.bottom + 8
+      view.leading == view.superview!.leading
+      view.trailing == view.superview!.trailing
+    }
+    
+    // Add separator
+    let separator2 = LineView()
+    scrollView.addSubview(separator2)
+    constrain(separator2, photoSelector) { view, topView in
       view.top == topView.bottom + 20
       view.leading == view.superview!.leading
       view.trailing == view.superview!.trailing
@@ -107,19 +147,35 @@ class ReportView: UIView {
     
     // Add address textfield
     scrollView.addSubview(addressTextField)
-    constrain(addressTextField, photoSelector) { view, topView in
-      view.top == topView.bottom + 20
+    constrain(addressTextField, separator2) { view, topView in
+      view.top == topView.bottom + 10
       view.leading == view.superview!.leading + 20
       view.trailing == view.superview!.trailing - 20
       view.height == 34
     }
     
+    // Add separator
+    let separator3 = LineView()
+    scrollView.addSubview(separator3)
+    constrain(separator3, addressTextField) { view, topView in
+      view.top == topView.bottom + 10
+      view.leading == view.superview!.leading
+      view.trailing == view.superview!.trailing
+    }
+    
     // Add comments view
     scrollView.addSubview(commentsView)
-    constrain(commentsView, addressTextField) { view, topView in
+    constrain(commentsView, separator3) { view, topView in
+      view.top == topView.bottom + 10
+      view.leading == view.superview!.leading
+      view.trailing == view.superview!.trailing
+    }
+    
+    // Add send button
+    scrollView.addSubview(sendView)
+    constrain(sendView, commentsView) { view, topView in
       view.top == topView.bottom + 20
-      view.leading == view.superview!.leading + 20
-      view.trailing == view.superview!.trailing - 20
+      view.centerX == view.superview!.centerX
       view.bottom == view.superview!.bottom - 20
     }
   }
@@ -133,5 +189,9 @@ class ReportView: UIView {
     let insets = UIEdgeInsetsMake(0, 0, height, 0)
     self.scrollView.contentInset = insets
     self.scrollView.scrollIndicatorInsets = insets
+  }
+  
+  @objc private func sendPressed() {
+    onSend?()
   }
 }

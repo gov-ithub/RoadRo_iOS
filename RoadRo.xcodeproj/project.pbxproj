@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B1D28C21DAA297600F34B61 /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1D28C11DAA297600F34B61 /* LineView.swift */; };
 		5B4DF4C91DA93449008840D1 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4DF4C81DA93449008840D1 /* ReportViewController.swift */; };
 		5B4DF4CB1DA93450008840D1 /* ReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4DF4CA1DA93450008840D1 /* ReportView.swift */; };
 		5B4DF4CE1DA93694008840D1 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4DF4CD1DA93694008840D1 /* Settings.swift */; };
@@ -62,9 +63,12 @@
 		5BCF86D31DAA175900C928BA /* TableContentMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCF86D21DAA175900C928BA /* TableContentMessageView.swift */; };
 		5BCF86D51DAA1A9E00C928BA /* UIView+Drowing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCF86D41DAA1A9E00C928BA /* UIView+Drowing.swift */; };
 		5BCF86D81DAA1DA900C928BA /* CommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCF86D71DAA1DA900C928BA /* CommunityViewController.swift */; };
+		5BCF86DA1DAA1FA000C928BA /* CommunityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCF86D91DAA1FA000C928BA /* CommunityView.swift */; };
+		5BCF86DC1DAA20AE00C928BA /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCF86DB1DAA20AE00C928BA /* RoundedButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B1D28C11DAA297600F34B61 /* LineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
 		5B4DF4C81DA93449008840D1 /* ReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
 		5B4DF4CA1DA93450008840D1 /* ReportView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportView.swift; sourceTree = "<group>"; };
 		5B4DF4CD1DA93694008840D1 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
@@ -122,6 +126,8 @@
 		5BCF86D21DAA175900C928BA /* TableContentMessageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableContentMessageView.swift; sourceTree = "<group>"; };
 		5BCF86D41DAA1A9E00C928BA /* UIView+Drowing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Drowing.swift"; sourceTree = "<group>"; };
 		5BCF86D71DAA1DA900C928BA /* CommunityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunityViewController.swift; sourceTree = "<group>"; };
+		5BCF86D91DAA1FA000C928BA /* CommunityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunityView.swift; sourceTree = "<group>"; };
+		5BCF86DB1DAA20AE00C928BA /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -328,6 +334,8 @@
 				5BCF86D01DAA156000C928BA /* TableView.swift */,
 				5BCF86D21DAA175900C928BA /* TableContentMessageView.swift */,
 				5BC820A31DA9142200445B04 /* PortraitNavigationController.swift */,
+				5BCF86DB1DAA20AE00C928BA /* RoundedButton.swift */,
+				5B1D28C11DAA297600F34B61 /* LineView.swift */,
 			);
 			name = "Custom view";
 			sourceTree = "<group>";
@@ -361,6 +369,7 @@
 			isa = PBXGroup;
 			children = (
 				5BCF86D71DAA1DA900C928BA /* CommunityViewController.swift */,
+				5BCF86D91DAA1FA000C928BA /* CommunityView.swift */,
 			);
 			name = Community;
 			sourceTree = "<group>";
@@ -505,10 +514,12 @@
 				5B89EB7E1DA98B0000779243 /* ImagePicker.swift in Sources */,
 				5B4DF4E41DA96A00008840D1 /* CoreDataStore.swift in Sources */,
 				5B4DF4D31DA93842008840D1 /* Event.swift in Sources */,
+				5BCF86DA1DAA1FA000C928BA /* CommunityView.swift in Sources */,
 				5BC820971DA9135C00445B04 /* UIColor+App.swift in Sources */,
 				5BC8208A1DA9110B00445B04 /* AppDelegate.swift in Sources */,
 				5BC820BD1DA91AF300445B04 /* DataProvider+Network.swift in Sources */,
 				5B4DF4CE1DA93694008840D1 /* Settings.swift in Sources */,
+				5B1D28C21DAA297600F34B61 /* LineView.swift in Sources */,
 				5BC820C61DA91CFB00445B04 /* SignupView.swift in Sources */,
 				5BCF86D11DAA156000C928BA /* TableView.swift in Sources */,
 				5B89EB841DA9962800779243 /* HistoryViewController.swift in Sources */,
@@ -519,6 +530,7 @@
 				5B4DF4E81DA96AE7008840D1 /* ReportViewModel.swift in Sources */,
 				5B4DF4C91DA93449008840D1 /* ReportViewController.swift in Sources */,
 				5BC820901DA9131E00445B04 /* Config.swift in Sources */,
+				5BCF86DC1DAA20AE00C928BA /* RoundedButton.swift in Sources */,
 				5BC820C41DA91CE900445B04 /* NetworkReachability.swift in Sources */,
 				5B4DF4EF1DA970AE008840D1 /* KeyboardHandler.swift in Sources */,
 				5BCF86D51DAA1A9E00C928BA /* UIView+Drowing.swift in Sources */,

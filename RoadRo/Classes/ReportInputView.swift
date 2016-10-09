@@ -14,7 +14,7 @@ class ReportInputView: UIView {
   fileprivate var textView: UITextView = {
     let textView = UITextView()
     textView.textColor = UIColor.textColor()
-    textView.font = UIFont.fontRegularText()
+    textView.font = UIFont.fontTitleText()
     textView.contentMode = .top
     textView.showsHorizontalScrollIndicator = false
     textView.layer.cornerRadius = 4
@@ -29,7 +29,7 @@ class ReportInputView: UIView {
     let placeholder = UILabel()
     placeholder.textColor = UIColor.textColor()
     placeholder.font = UIFont.fontRegularText()
-    placeholder.text = NSLocalizedString("Detalii", comment: "")
+    placeholder.text = NSLocalizedString("Observatii", comment: "")
     return placeholder
   }()
   
@@ -67,6 +67,15 @@ class ReportInputView: UIView {
       let height = contentSize.height + 20
       return CGSize(width: UIViewNoIntrinsicMetric, height: max(140, height))
     }
+  }
+  
+  override func draw(_ rect: CGRect) {
+    let context = UIGraphicsGetCurrentContext()!
+    UIView.draw1PxLine(
+      context: context,
+      startPoint: CGPoint(x: 0, y: rect.height-1),
+      endPoint: CGPoint(x: rect.width, y: rect.height-1),
+      color: UIColor.separatorColor())
   }
 }
 
