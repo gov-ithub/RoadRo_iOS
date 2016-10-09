@@ -62,6 +62,8 @@
 		5BCF86D31DAA175900C928BA /* TableContentMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCF86D21DAA175900C928BA /* TableContentMessageView.swift */; };
 		5BCF86D51DAA1A9E00C928BA /* UIView+Drowing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCF86D41DAA1A9E00C928BA /* UIView+Drowing.swift */; };
 		5BCF86D81DAA1DA900C928BA /* CommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCF86D71DAA1DA900C928BA /* CommunityViewController.swift */; };
+		838250531DAA1FB00033269D /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838250521DAA1FB00033269D /* IntroViewController.swift */; };
+		838250551DAA1FCE0033269D /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838250541DAA1FCE0033269D /* IntroView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -122,6 +124,8 @@
 		5BCF86D21DAA175900C928BA /* TableContentMessageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableContentMessageView.swift; sourceTree = "<group>"; };
 		5BCF86D41DAA1A9E00C928BA /* UIView+Drowing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Drowing.swift"; sourceTree = "<group>"; };
 		5BCF86D71DAA1DA900C928BA /* CommunityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunityViewController.swift; sourceTree = "<group>"; };
+		838250521DAA1FB00033269D /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		838250541DAA1FCE0033269D /* IntroView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -369,6 +373,8 @@
 		838250511DAA1EE10033269D /* Intro */ = {
 			isa = PBXGroup;
 			children = (
+				838250521DAA1FB00033269D /* IntroViewController.swift */,
+				838250541DAA1FCE0033269D /* IntroView.swift */,
 			);
 			name = Intro;
 			sourceTree = "<group>";
@@ -496,11 +502,13 @@
 				5BC820D21DA91DC300445B04 /* Request+Cancelable.swift in Sources */,
 				5B89EB781DA9746000779243 /* ReportPhotoSelector.swift in Sources */,
 				5B89EB7C1DA9800C00779243 /* LocationTracker.swift in Sources */,
+				838250531DAA1FB00033269D /* IntroViewController.swift in Sources */,
 				5B89EB7A1DA977BD00779243 /* ReportInputView.swift in Sources */,
 				5B4DF4DD1DA96990008840D1 /* ObjectsProviderProtocol.swift in Sources */,
 				5BC820991DA9135C00445B04 /* UINavigationController+App.swift in Sources */,
 				5B4DF4CB1DA93450008840D1 /* ReportView.swift in Sources */,
 				5BCF86D31DAA175900C928BA /* TableContentMessageView.swift in Sources */,
+				838250551DAA1FCE0033269D /* IntroView.swift in Sources */,
 				5BC820911DA9131E00445B04 /* Config+Keys.swift in Sources */,
 				5BC820D41DA91DED00445B04 /* Logging.swift in Sources */,
 				5B89EB861DA9964000779243 /* HistoryView.swift in Sources */,

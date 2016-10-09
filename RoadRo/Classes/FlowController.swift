@@ -33,6 +33,8 @@ class FlowController : NSObject, UIGestureRecognizerDelegate {
     } else {
       controller = self.createSignupController()
     }
+    
+    controller = self.createIntroController()
     return controller
   }
   
@@ -51,6 +53,12 @@ class FlowController : NSObject, UIGestureRecognizerDelegate {
     return tabController
   }
   
+    fileprivate func createIntroController() -> UIViewController {
+        let controller = IntroViewController(config: config)
+        return controller
+    }
+    
+    
   fileprivate func createReportController() -> UIViewController {
     let controller = ReportViewController(config: config)
     let navController = UINavigationController(rootViewController: controller)
