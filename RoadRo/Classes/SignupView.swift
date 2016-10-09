@@ -37,7 +37,7 @@ class SignupView: UIView {
   }()
   
   fileprivate var sendView: RoundedButton = {
-    let title = NSLocalizedString("Inregistrare", comment: "")
+    let title = NSLocalizedString("Înregistrare", comment: "")
     let view = RoundedButton(title: title)
     return view
   }()
