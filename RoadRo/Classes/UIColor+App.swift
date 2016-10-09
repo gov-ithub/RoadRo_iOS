@@ -15,11 +15,15 @@ extension UIColor {
   }
   
   class func brandColor() -> UIColor {
-    return UIColor.colorCode(111, green: 189, blue: 228, alpha: 1.0)
+    return UIColor.colorCode(29, green: 175, blue: 236, alpha: 1.0)
   }
   
   class func backgroundColor() -> UIColor {
     return UIColor.colorCode(236, green: 237, blue: 238, alpha: 1.0)
+  }
+  
+  class func backgroundGrayColor() -> UIColor {
+    return UIColor.colorCode(242, green: 244, blue: 246, alpha: 1.0)
   }
   
   class func textColor() -> UIColor {

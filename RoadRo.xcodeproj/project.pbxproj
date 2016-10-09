@@ -58,6 +58,10 @@
 		5BC820D01DA91DA600445B04 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BC820CB1DA91DA600445B04 /* SwiftyJSON.framework */; };
 		5BC820D21DA91DC300445B04 /* Request+Cancelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC820D11DA91DC300445B04 /* Request+Cancelable.swift */; };
 		5BC820D41DA91DED00445B04 /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC820D31DA91DED00445B04 /* Logging.swift */; };
+		5BCF86D11DAA156000C928BA /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCF86D01DAA156000C928BA /* TableView.swift */; };
+		5BCF86D31DAA175900C928BA /* TableContentMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCF86D21DAA175900C928BA /* TableContentMessageView.swift */; };
+		5BCF86D51DAA1A9E00C928BA /* UIView+Drowing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCF86D41DAA1A9E00C928BA /* UIView+Drowing.swift */; };
+		5BCF86D81DAA1DA900C928BA /* CommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCF86D71DAA1DA900C928BA /* CommunityViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -114,6 +118,10 @@
 		5BC820CB1DA91DA600445B04 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		5BC820D11DA91DC300445B04 /* Request+Cancelable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Request+Cancelable.swift"; sourceTree = "<group>"; };
 		5BC820D31DA91DED00445B04 /* Logging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
+		5BCF86D01DAA156000C928BA /* TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
+		5BCF86D21DAA175900C928BA /* TableContentMessageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableContentMessageView.swift; sourceTree = "<group>"; };
+		5BCF86D41DAA1A9E00C928BA /* UIView+Drowing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Drowing.swift"; sourceTree = "<group>"; };
+		5BCF86D71DAA1DA900C928BA /* CommunityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunityViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				5BC820D11DA91DC300445B04 /* Request+Cancelable.swift */,
+				5BCF86D41DAA1A9E00C928BA /* UIView+Drowing.swift */,
 				5BC820D31DA91DED00445B04 /* Logging.swift */,
 				5B4DF4CD1DA93694008840D1 /* Settings.swift */,
 				5B4DF4D21DA93842008840D1 /* Event.swift */,
@@ -294,6 +303,7 @@
 				5B4DF4C61DA93431008840D1 /* Signup */,
 				5B4DF4C71DA93439008840D1 /* Report */,
 				5B4DF4CC1DA93617008840D1 /* History */,
+				5BCF86D61DAA1D9700C928BA /* Community */,
 			);
 			name = "View controllers";
 			sourceTree = "<group>";
@@ -315,6 +325,8 @@
 			isa = PBXGroup;
 			children = (
 				5B89EB811DA9953000779243 /* ActivityIndicator.swift */,
+				5BCF86D01DAA156000C928BA /* TableView.swift */,
+				5BCF86D21DAA175900C928BA /* TableContentMessageView.swift */,
 				5BC820A31DA9142200445B04 /* PortraitNavigationController.swift */,
 			);
 			name = "Custom view";
@@ -343,6 +355,14 @@
 				5BC820BE1DA91AF700445B04 /* DataProvider+Account.swift */,
 			);
 			name = DataProvider;
+			sourceTree = "<group>";
+		};
+		5BCF86D61DAA1D9700C928BA /* Community */ = {
+			isa = PBXGroup;
+			children = (
+				5BCF86D71DAA1DA900C928BA /* CommunityViewController.swift */,
+			);
+			name = Community;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -472,6 +492,7 @@
 				5B4DF4DD1DA96990008840D1 /* ObjectsProviderProtocol.swift in Sources */,
 				5BC820991DA9135C00445B04 /* UINavigationController+App.swift in Sources */,
 				5B4DF4CB1DA93450008840D1 /* ReportView.swift in Sources */,
+				5BCF86D31DAA175900C928BA /* TableContentMessageView.swift in Sources */,
 				5BC820911DA9131E00445B04 /* Config+Keys.swift in Sources */,
 				5BC820D41DA91DED00445B04 /* Logging.swift in Sources */,
 				5B89EB861DA9964000779243 /* HistoryView.swift in Sources */,
@@ -489,8 +510,10 @@
 				5BC820BD1DA91AF300445B04 /* DataProvider+Network.swift in Sources */,
 				5B4DF4CE1DA93694008840D1 /* Settings.swift in Sources */,
 				5BC820C61DA91CFB00445B04 /* SignupView.swift in Sources */,
+				5BCF86D11DAA156000C928BA /* TableView.swift in Sources */,
 				5B89EB841DA9962800779243 /* HistoryViewController.swift in Sources */,
 				5B89EB8A1DA9982E00779243 /* ReportTableViewCell.swift in Sources */,
+				5BCF86D81DAA1DA900C928BA /* CommunityViewController.swift in Sources */,
 				5BC820981DA9135C00445B04 /* UIFont+App.swift in Sources */,
 				5B4DF4DF1DA96990008840D1 /* ObjectsTableViewDelegate.swift in Sources */,
 				5B4DF4E81DA96AE7008840D1 /* ReportViewModel.swift in Sources */,
@@ -498,6 +521,7 @@
 				5BC820901DA9131E00445B04 /* Config.swift in Sources */,
 				5BC820C41DA91CE900445B04 /* NetworkReachability.swift in Sources */,
 				5B4DF4EF1DA970AE008840D1 /* KeyboardHandler.swift in Sources */,
+				5BCF86D51DAA1A9E00C928BA /* UIView+Drowing.swift in Sources */,
 				5B89EB801DA98C6500779243 /* FlowController+ImagePicker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -20,10 +20,29 @@ class ReportPhotoSelector: UIView {
   }
   
   fileprivate func setup() {
-    self.backgroundColor = UIColor.white
+    self.backgroundColor = UIColor.backgroundGrayColor()
   }
   
   override var intrinsicContentSize: CGSize {
-    return CGSize(width: UIViewNoIntrinsicMetric, height: 80)
+    let height = self.bounds.width / 4
+    return CGSize(width: UIViewNoIntrinsicMetric, height: height)
+  }
+  
+  override func layoutSubviews() {
+    super.layoutSubviews()
+    self.invalidateIntrinsicContentSize()
+  }
+  
+  override func draw(_ rect: CGRect) {
+    let context = UIGraphicsGetCurrentContext()!
+    let posX = floor(rect.width / 4)
+    
+    for i in 0..<4 {
+      UIView.draw1PxLine(
+        context: context,
+        startPoint: CGPoint(x: posX*CGFloat(i), y: 0),
+        endPoint: CGPoint(x: posX*CGFloat(i), y: rect.height),
+        color: UIColor.white)
+    }
   }
 }

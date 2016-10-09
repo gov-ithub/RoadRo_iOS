@@ -10,6 +10,8 @@ import UIKit
 
 class ReportTableViewCell: UITableViewCell {
   
+  fileprivate var model: ReportViewModel!
+  
   override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
     self.setup()
@@ -21,5 +23,9 @@ class ReportTableViewCell: UITableViewCell {
   
   private func setup() {
     
+  }
+  
+  func configure(model: ReportViewModel) {
+    self.model = model
   }
 }

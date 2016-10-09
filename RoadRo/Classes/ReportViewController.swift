@@ -18,7 +18,11 @@ class ReportViewController: UIViewController {
     self.config = config
     super.init(nibName: nil, bundle: nil)
     
-    self.title = NSLocalizedString("Raporteaza", comment: "Raporteaza")
+    self.title = NSLocalizedString("Reclamatie", comment: "")
+    self.tabBarItem = UITabBarItem(
+      title: NSLocalizedString("Reclamatie", comment: ""),
+      image: UIImage(named: "communityDisabled"),
+      selectedImage: UIImage(named: "communityEnabled"))
   }
   
   required init?(coder aDecoder: NSCoder) {

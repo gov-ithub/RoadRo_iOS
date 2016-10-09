@@ -15,7 +15,7 @@ class ReportView: UIView {
 
   fileprivate var scrollView: UIScrollView = {
     let scrollView = UIScrollView()
-    scrollView.backgroundColor = UIColor.backgroundColor()
+    scrollView.backgroundColor = UIColor.white
     return scrollView
   }()
   
@@ -101,8 +101,8 @@ class ReportView: UIView {
     scrollView.addSubview(photoSelector)
     constrain(photoSelector, photoTitleLabel) { view, topView in
       view.top == topView.bottom + 20
-      view.leading == view.superview!.leading + 20
-      view.trailing == view.superview!.trailing - 20
+      view.leading == view.superview!.leading
+      view.trailing == view.superview!.trailing
     }
     
     // Add address textfield
