@@ -91,9 +91,5 @@ extension LocationTracker: CLLocationManagerDelegate {
   
   public func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
     self.lastKnownLocation = locations.last
-    
-//    if let coord = lastKnownLocation?.coordinate {
-//      print("Location: ", coord.latitude, coord.longitude)
-//    }
   }
 }

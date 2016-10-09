@@ -21,6 +21,7 @@ class Config {
   // Api data provider
   lazy var dataProvider : DataProvider = {
     let dataProvider = DataProvider(apiNetworkUrl: Config.Urls.kNetworkApiUrl)
+    dataProvider.authorizationDataSource = self
     return dataProvider
   }()
   
@@ -34,6 +35,13 @@ class Config {
   var eventAccountState = Event<AccountState>()
   
   init() {
+  }
+}
+
+extension Config : DataProviderAuthorizationDataSource {
+  
+  func dataProviderAccessToken() -> String? {
+    return self.accessToken
   }
 }
 

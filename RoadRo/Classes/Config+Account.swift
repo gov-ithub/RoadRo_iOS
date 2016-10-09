@@ -22,6 +22,18 @@ extension Config {
     }
   }
   
+  var userId: String? {
+    get {
+      return Settings.objectForKey(key: kAccountUserId) as? String
+    }
+  }
+  
+  var accessToken: String? {
+    get {
+      return Settings.objectForKey(key: kAccountToken) as? String
+    }
+  }
+  
   func didLogin(id: String, token: String) {
     
     // Save id and token

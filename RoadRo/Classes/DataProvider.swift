@@ -11,21 +11,26 @@ import Alamofire
 import SwiftyJSON
 
 // Response handler
-public typealias DataResponseHandler = (_ result: Any?, _ errorMessage: String?) -> Void
+typealias DataResponseHandler = (_ result: Any?, _ errorMessage: String?) -> Void
+
+protocol DataProviderAuthorizationDataSource {
+  func dataProviderAccessToken() -> String?
+}
 
 enum ApiPath {
   case Register
   
   func path() -> String {
     switch self {
-    case .Register: return "/api/register"
+    case .Register: return "/v0/users/register/"
     }
   }
 }
 
-public class DataProvider {
+class DataProvider {
   
-  public var dataStore : CoreDataStore = RealmStore()
+  var dataStore : CoreDataStore = RealmStore()
+  var authorizationDataSource : DataProviderAuthorizationDataSource?
   
   // APi
   var kNetworkApiURL : String

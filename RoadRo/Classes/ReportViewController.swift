@@ -63,11 +63,6 @@ class ReportViewController: UIViewController {
       AlertView.show(withMessage: NSLocalizedString("Adauga adresa incidentului", comment: ""))
       return
     }
-    
-//    ActivityIndicator.show()
-//    onPickImage?({(image) -> Void in
-//      print(image)
-//      })
   }
 }
 

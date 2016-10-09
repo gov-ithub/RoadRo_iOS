@@ -9,7 +9,7 @@
 import UIKit
 
 class SignupViewController: UIViewController {
-
+  
   fileprivate var contentView: SignupView { get { return self.view as! SignupView } }
   fileprivate var config: Config
   
@@ -55,8 +55,20 @@ class SignupViewController: UIViewController {
     }
     
     // Call register api
-    self.config.dataProvider.doRegister(phone: phoneNumber) {[weak self] (_, _) in
-      self?.config.didLogin(id: "123", token: "123")
+    ActivityIndicator.show()
+    self.config.dataProvider.doRegister(phone: phoneNumber) {[weak self] (result, error) in
+      ActivityIndicator.hide()
+      
+      if let error = error {
+        AlertView.show(withMessage: error)
+        return
+      }
+      
+      guard let result = result as? (accessToken: String, userId: String) else {
+        return
+      }
+      
+      self?.config.didLogin(id: result.userId, token: result.accessToken)
       self?.didSignup?()
     }
   }

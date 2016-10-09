@@ -27,7 +27,7 @@ extension DataProvider {
         errorMessage = msg
         DLog(object: "API ERROR: \(errorMessage)")
       }
-      handler(data["result"], errorMessage)
+      handler(data["response"], errorMessage)
     }
   }
   
@@ -55,7 +55,8 @@ extension DataProvider {
     // Authorization header
     let headers: [String : String]? = ["Content-Type": "application/json"]
     
-    let request = self.manager.request(url, method: method, parameters: params, encoding: URLEncoding.default, headers: headers)
+    let encoding = Alamofire.JSONEncoding.default
+    let request = self.manager.request(url, method: method, parameters: params, encoding: encoding, headers: headers)
     
     .validate(statusCode: 200..<500)
     .validate(contentType: ["application/json"])

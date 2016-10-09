@@ -10,12 +10,24 @@
 import Foundation
 import SwiftyJSON
 
-public extension DataProvider {
+extension DataProvider {
   
   @discardableResult public func doRegister(phone: String, completion: DataResponseHandler?) -> Cancelable? {
     
-    return self.performRequest(method: .get, path: ApiPath.Register.path(), params: nil) { (result, errorMessage) -> Void in
-      completion?(nil, nil)
+    let params = [ "phone": phone ]
+    return self.performRequest(method: .post, path: ApiPath.Register.path(), params: params) { (result, errorMessage) -> Void in
+      
+      guard let result = result as? JSON else {
+        completion?(nil, nil)
+        return
+      }
+      
+      guard let accessToken = result["access_token"].string, let userId = result["user_id"].string else {
+          completion?(nil, errorMessage)
+          return
+      }
+      
+      completion?((accessToken: accessToken, userId: userId), errorMessage)
     }
   }
 }

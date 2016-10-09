@@ -78,7 +78,6 @@ class ReportPhotoSelector: UIView {
   
   override var intrinsicContentSize: CGSize {
     let height = self.bounds.width / 4
-    print(height)
     return CGSize(width: UIViewNoIntrinsicMetric, height: height)
   }
   
