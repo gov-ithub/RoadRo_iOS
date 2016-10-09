@@ -53,12 +53,25 @@ class FlowController : NSObject, UIGestureRecognizerDelegate {
     return tabController
   }
   
-    fileprivate func createIntroController() -> UIViewController {
-        let controller = IntroViewController(config: config)
-        return controller
+  fileprivate func createIntroController() -> UIViewController {
+    let controller = IntroViewController()
+
+    controller.onContinue = { [weak self] in
+      self?.showSignupController()
     }
     
-    
+    let navController = UINavigationController(rootViewController: controller)
+    navController.isNavigationBarHidden = true
+
+    return navController
+  }
+  
+  func showSignupController() {
+    let controller = self.createSignupController()
+    self.push(controller: controller)
+  }
+  
+  
   fileprivate func createReportController() -> UIViewController {
     let controller = ReportViewController(config: config)
     let navController = UINavigationController(rootViewController: controller)

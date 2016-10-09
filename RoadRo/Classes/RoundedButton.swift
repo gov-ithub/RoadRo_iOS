@@ -11,6 +11,8 @@ import Cartography
 
 class RoundedButton: UIControl {
   
+  fileprivate var title: String
+  
   override var isHighlighted: Bool {
     didSet {
       let alpha: CGFloat = isHighlighted ? 0.6 : 1.0
@@ -20,7 +22,6 @@ class RoundedButton: UIControl {
   
   fileprivate var textLabel: UILabel = {
     let label = UILabel()
-    label.text = NSLocalizedString("Trimite reclamatie", comment: "")
     label.textColor = UIColor.white
     label.font = UIFont.fontAppMedium(20)
     label.backgroundColor = UIColor.clear
@@ -28,9 +29,16 @@ class RoundedButton: UIControl {
     return label
   }()
   
-  init() {
+  init(title: String) {
+    self.title = title
     super.init(frame: CGRect.zero)
     self.setup()
+  }
+  
+  convenience init(title: String, titleColor: UIColor, backgroundColor: UIColor) {
+    self.init(title: title)
+    self.backgroundColor = backgroundColor
+    self.textLabel.textColor = titleColor
   }
   
   required init?(coder aDecoder: NSCoder) {
@@ -39,7 +47,7 @@ class RoundedButton: UIControl {
   
   fileprivate func setup() {
     self.backgroundColor = UIColor.brandColor()
-    
+    self.textLabel.text = title
     self.addSubview(textLabel)
     constrain(textLabel) { view in
       view.edges == view.superview!.edges
