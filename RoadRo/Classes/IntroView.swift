@@ -35,7 +35,7 @@ class IntroView: UIView {
   
   let textlabel: UILabel = {
     let label = UILabel()
-    label.numberOfLines = 3
+    label.numberOfLines = 4
     label.textColor = UIColor.white
     label.font = UIFont.fontAppRegular(15)
     label.textAlignment = .center

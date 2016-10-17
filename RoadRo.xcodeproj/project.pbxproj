@@ -158,6 +158,8 @@
 		83A162581DB51C8A00250921 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		83A1625C1DB5258700250921 /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ro; path = ro.lproj/Localizable.strings; sourceTree = "<group>"; };
 		83A162611DB5258800250921 /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ro; path = ro.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		83A162631DB52CED00250921 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		83A162641DB52CEE00250921 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -629,6 +631,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				83A1625C1DB5258700250921 /* ro */,
+				83A162631DB52CED00250921 /* fr */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -637,6 +640,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				83A162611DB5258800250921 /* ro */,
+				83A162641DB52CEE00250921 /* fr */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
