@@ -1,6 +1,6 @@
 //
 //  TableView.swift
-//  SkiRomania
+//  RoadRo
 //
 //  Created by Mihai Dumitrache on 04/10/15.
 //  Copyright © 2015 Mihai Dumitrache. All rights reserved.

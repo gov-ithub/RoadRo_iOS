@@ -1,6 +1,6 @@
 //
 //  LocationTracker.swift
-//  LocationTracker
+//  RoadRo
 //
 //  Created by mihai on 02/08/16.
 //  Copyright © 2016 mihai. All rights reserved.

@@ -1,7 +1,7 @@
 
 //
 //  DataProvider+Resort.swift
-//  SkiRomania
+//  RoadRo
 //
 //  Created by Mihai Dumitrache on 08/10/2016.
 //  Copyright © 2016 Work In Progress. All rights reserved.

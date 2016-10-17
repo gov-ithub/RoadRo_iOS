@@ -1,6 +1,6 @@
 //
 //  UIImage+Resizing.swift
-//  QuickWins
+//  RoadRo
 //
 //  Created by Mihai Dumitrache on 09/10/15.
 //  Copyright © 2015 Mihai Dumitrache. All rights reserved.
