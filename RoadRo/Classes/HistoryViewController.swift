@@ -23,9 +23,9 @@ class HistoryViewController: UIViewController {
     self.config = config
     super.init(nibName: nil, bundle: nil)
     
-    self.title = NSLocalizedString("Istoric", comment: "")
+    self.title = NSLocalizedString("History", comment: "")
     self.tabBarItem = UITabBarItem(
-      title: NSLocalizedString("Istoric", comment: ""),
+      title: NSLocalizedString("History", comment: ""),
       image: UIImage(named: "istoricDisabled"),
       selectedImage: UIImage(named: "istoricEnabled"))
   }

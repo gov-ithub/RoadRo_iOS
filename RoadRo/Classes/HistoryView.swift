@@ -13,7 +13,7 @@ class HistoryView: UIView {
   
   var tableView: TableView = {
     let tableView = TableView()
-    tableView.noContentMessage = NSLocalizedString("Nu ai adăugat nicio sesizare", comment: "")
+    tableView.noContentMessage = NSLocalizedString("You haven't added any repport", comment: "")
     tableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: 1, height: 1))
     return tableView
   }()

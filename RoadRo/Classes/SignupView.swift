@@ -14,7 +14,7 @@ class SignupView: UIView {
   fileprivate var titleLabel: UILabel = {
     let label = UILabel()
     label.font = UIFont.fontRegularText()
-    label.text = NSLocalizedString("Introduceți numărul de telefon pentru\ncrearea unui cont", comment: "")
+    label.text = NSLocalizedString("Please provide your phone number\nfor the account creation", comment: "")
     label.textColor = UIColor.textColorHighlighted()
     label.textAlignment = .center
     label.numberOfLines = 2
@@ -37,7 +37,7 @@ class SignupView: UIView {
   }()
   
   fileprivate var sendView: RoundedButton = {
-    let title = NSLocalizedString("Înregistrare", comment: "")
+    let title = NSLocalizedString("Register", comment: "")
     let view = RoundedButton(title: title)
     return view
   }()

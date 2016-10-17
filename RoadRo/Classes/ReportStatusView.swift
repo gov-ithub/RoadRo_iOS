@@ -23,9 +23,9 @@ enum ReportStatus: Int {
   
   var name: String {
     switch self {
-    case .NotProcessed: return NSLocalizedString("Neprocesată", comment: "").uppercased()
-    case .Processing: return NSLocalizedString("În procesare", comment: "").uppercased()
-    case .Processed: return NSLocalizedString("Procesată", comment: "").uppercased()
+    case .NotProcessed: return NSLocalizedString("Pending", comment: "").uppercased()
+    case .Processing: return NSLocalizedString("In process", comment: "").uppercased()
+    case .Processed: return NSLocalizedString("Finalized", comment: "").uppercased()
     }
   }
 }

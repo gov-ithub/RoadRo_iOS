@@ -18,7 +18,7 @@ class SignupViewController: FlowBaseViewController {
   init(config: Config) {
     self.config = config
     super.init()
-    self.title = NSLocalizedString("Înregistrare", comment: "Înregistrare")
+    self.title = NSLocalizedString("Register", comment: "")
   }
   
   required init?(coder aDecoder: NSCoder) {

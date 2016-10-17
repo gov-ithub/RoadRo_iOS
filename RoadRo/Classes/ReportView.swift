@@ -30,7 +30,7 @@ class ReportView: UIView {
   fileprivate var titleLabel: UILabel = {
     let label = UILabel()
     label.font = UIFont.fontRegularText()
-    label.text = NSLocalizedString("Pentru a ne trimite o sesizare, te rugăm să\ncompletezi formularul de mai jos", comment: "")
+    label.text = NSLocalizedString("To send us a report, please\nsubmit below information", comment: "")
     label.textColor = UIColor.textColorHighlighted()
     label.textAlignment = .center
     label.numberOfLines = 0
@@ -40,7 +40,7 @@ class ReportView: UIView {
   fileprivate var photoTitleLabel: UILabel = {
     let label = UILabel()
     label.font = UIFont.fontTitleText()
-    label.text = NSLocalizedString("Imagini de la locul incidentului", comment: "")
+    label.text = NSLocalizedString("Pictures from location", comment: "")
     label.textColor = UIColor.textColor()
     return label
   }()
@@ -60,7 +60,7 @@ class ReportView: UIView {
     let label = UITextField()
     label.font = UIFont.fontTitleText()
     label.textColor = UIColor.textColor()
-    label.placeholder = NSLocalizedString("Adresa", comment: "")
+    label.placeholder = NSLocalizedString("Address", comment: "")
     label.backgroundColor = UIColor.white
     return label
   }()
@@ -71,7 +71,7 @@ class ReportView: UIView {
   }()
   
   fileprivate var sendView: RoundedButton = {
-    let title = NSLocalizedString("Trimite sesizarea", comment: "")
+    let title = NSLocalizedString("Send report", comment: "")
     let view = RoundedButton(title: title)
     return view
   }()

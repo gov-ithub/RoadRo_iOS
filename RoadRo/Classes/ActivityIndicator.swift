@@ -64,7 +64,7 @@ class ActivityIndicator : UIView {
   }
   
   static func show() {
-    ActivityIndicator.show(message: NSLocalizedString("Se încarcă...", comment: ""))
+    ActivityIndicator.show(message: NSLocalizedString("Loading...", comment: ""))
   }
   
   static func show(message: String) {

@@ -16,9 +16,9 @@ class CommunityViewController: UIViewController {
     self.config = config
     super.init(nibName: nil, bundle: nil)
     
-    self.title = NSLocalizedString("Comunitate", comment: "")
+    self.title = NSLocalizedString("Community", comment: "")
     self.tabBarItem = UITabBarItem(
-      title: NSLocalizedString("Comunitate", comment: ""),
+      title: NSLocalizedString("Community", comment: ""),
       image: UIImage(named: "communityDisabled"),
       selectedImage: UIImage(named: "communityEnabled"))
   }

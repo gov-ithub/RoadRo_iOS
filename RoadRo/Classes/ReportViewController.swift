@@ -20,9 +20,9 @@ class ReportViewController: UIViewController {
     self.config = config
     super.init(nibName: nil, bundle: nil)
     
-    self.title = NSLocalizedString("Sesizare nouă", comment: "")
+    self.title = NSLocalizedString("New report", comment: "")
     self.tabBarItem = UITabBarItem(
-      title: NSLocalizedString("Sesizare", comment: ""),
+      title: NSLocalizedString("Report", comment: ""),
       image: UIImage(named: "raportDisabled"),
       selectedImage: UIImage(named: "raportEnabled"))
   }
@@ -62,12 +62,12 @@ class ReportViewController: UIViewController {
     
     let images = self.contentView.images
     if images.count == 0 {
-      AlertView.show(withMessage: NSLocalizedString("Adaugă cel puțin o imagine", comment: ""))
+      AlertView.show(withMessage: NSLocalizedString("Attach at least one picture", comment: ""))
       return
     }
     
     guard let address = self.contentView.address, address.characters.count > 0 else {
-      AlertView.show(withMessage: NSLocalizedString("Adaugă adresa incidentului", comment: ""))
+      AlertView.show(withMessage: NSLocalizedString("Provide event location", comment: ""))
       return
     }
     let comments = self.contentView.comments ?? ""
@@ -82,7 +82,7 @@ class ReportViewController: UIViewController {
       }
       
       // Show thank you message
-      AlertView.show(withMessage: "Multumim! Sesizarea ta a fost salvata.")
+        AlertView.show(withMessage: NSLocalizedString("Thank you! Your report has been sent.", comment: ""))
       
       // Reset UI
       self?.contentView.resetUI()

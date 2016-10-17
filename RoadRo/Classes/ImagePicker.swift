@@ -25,18 +25,18 @@ class ImagePicker : NSObject, UINavigationControllerDelegate, UIImagePickerContr
     let actionController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
     
     if UIImagePickerController.isSourceTypeAvailable(.camera) {
-      let takePhotoAction = UIAlertAction(title: NSLocalizedString("Fotografiază", comment: ""), style: .default) {[weak self] (_) in
+      let takePhotoAction = UIAlertAction(title: NSLocalizedString("Take picture", comment: ""), style: .default) {[weak self] (_) in
         self?.openImagePicker(withSourceType: .camera)
       }
       actionController.addAction(takePhotoAction)
     }
     
-    let cameraRollAction = UIAlertAction(title: NSLocalizedString("Alege o imagine", comment: ""), style: .default) {[weak self] (_) in
+    let cameraRollAction = UIAlertAction(title: NSLocalizedString("Choose a photo", comment: ""), style: .default) {[weak self] (_) in
       self?.openImagePicker(withSourceType: .photoLibrary)
     }
     actionController.addAction(cameraRollAction)
     
-    let cancelAction = UIAlertAction(title: NSLocalizedString("Înapoi", comment: ""), style: .destructive) { (_) in
+    let cancelAction = UIAlertAction(title: NSLocalizedString("Back", comment: ""), style: .destructive) { (_) in
     }
     actionController.addAction(cancelAction)
     viewController.present(actionController, animated: true, completion: nil)
