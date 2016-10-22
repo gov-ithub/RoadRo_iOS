@@ -76,7 +76,8 @@ class IntroView: UIView {
       
       // button position
       button.centerX == button.superview!.centerX
-      button.bottom == button.superview!.bottom - 125
+      button.bottom >= button.superview!.bottom - 125
+      button.top >= text.bottom + 16  // don't overlap text
       button.height == 50
       button.width == 220
       
