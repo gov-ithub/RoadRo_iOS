@@ -17,6 +17,7 @@
 		5B1D28D41DAA6BF900F34B61 /* ReportStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1D28D31DAA6BF900F34B61 /* ReportStatusView.swift */; };
 		5B1D28D61DAA765500F34B61 /* DataProvider+Reports.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1D28D51DAA765500F34B61 /* DataProvider+Reports.swift */; };
 		5B1D28D81DAA782300F34B61 /* UIImage+Resizing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1D28D71DAA782300F34B61 /* UIImage+Resizing.swift */; };
+		5B2A6FA71DBBBB2E00D1D590 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2A6FA61DBBBB2E00D1D590 /* Device.swift */; };
 		5B4AF52C1DBB51E20080BA7E /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B4AF52B1DBB51E20080BA7E /* OpenUDID.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		5B4DF4C91DA93449008840D1 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4DF4C81DA93449008840D1 /* ReportViewController.swift */; };
 		5B4DF4CB1DA93450008840D1 /* ReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4DF4CA1DA93450008840D1 /* ReportView.swift */; };
@@ -92,6 +93,7 @@
 		5B1D28D31DAA6BF900F34B61 /* ReportStatusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportStatusView.swift; sourceTree = "<group>"; };
 		5B1D28D51DAA765500F34B61 /* DataProvider+Reports.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DataProvider+Reports.swift"; sourceTree = "<group>"; };
 		5B1D28D71DAA782300F34B61 /* UIImage+Resizing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Resizing.swift"; sourceTree = "<group>"; };
+		5B2A6FA61DBBBB2E00D1D590 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		5B4AF52A1DBB51E20080BA7E /* OpenUDID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenUDID.h; sourceTree = "<group>"; };
 		5B4AF52B1DBB51E20080BA7E /* OpenUDID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenUDID.m; sourceTree = "<group>"; };
 		5B4AF5301DBB52420080BA7E /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
@@ -393,6 +395,7 @@
 				5B89EB7B1DA9800C00779243 /* LocationTracker.swift */,
 				5B4DF4EE1DA970AE008840D1 /* KeyboardHandler.swift */,
 				5B89EB7D1DA98B0000779243 /* ImagePicker.swift */,
+				5B2A6FA61DBBBB2E00D1D590 /* Device.swift */,
 				5B4DF4D41DA96973008840D1 /* Data */,
 				5B4DF4D11DA9383A008840D1 /* Other */,
 				5BC820A21DA9141B00445B04 /* Custom view */,
@@ -591,6 +594,7 @@
 				5BC820991DA9135C00445B04 /* UINavigationController+App.swift in Sources */,
 				5B4DF4CB1DA93450008840D1 /* ReportView.swift in Sources */,
 				5B1D28C41DAA308E00F34B61 /* ReportImageSelectorView.swift in Sources */,
+				5B2A6FA71DBBBB2E00D1D590 /* Device.swift in Sources */,
 				5BCF86D31DAA175900C928BA /* TableContentMessageView.swift in Sources */,
 				838250551DAA1FCE0033269D /* IntroView.swift in Sources */,
 				5BC820911DA9131E00445B04 /* Config+Keys.swift in Sources */,
