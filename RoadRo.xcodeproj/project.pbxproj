@@ -17,6 +17,7 @@
 		5B1D28D41DAA6BF900F34B61 /* ReportStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1D28D31DAA6BF900F34B61 /* ReportStatusView.swift */; };
 		5B1D28D61DAA765500F34B61 /* DataProvider+Reports.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1D28D51DAA765500F34B61 /* DataProvider+Reports.swift */; };
 		5B1D28D81DAA782300F34B61 /* UIImage+Resizing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1D28D71DAA782300F34B61 /* UIImage+Resizing.swift */; };
+		5B4AF52C1DBB51E20080BA7E /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B4AF52B1DBB51E20080BA7E /* OpenUDID.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		5B4DF4C91DA93449008840D1 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4DF4C81DA93449008840D1 /* ReportViewController.swift */; };
 		5B4DF4CB1DA93450008840D1 /* ReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4DF4CA1DA93450008840D1 /* ReportView.swift */; };
 		5B4DF4CE1DA93694008840D1 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4DF4CD1DA93694008840D1 /* Settings.swift */; };
@@ -91,6 +92,9 @@
 		5B1D28D31DAA6BF900F34B61 /* ReportStatusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportStatusView.swift; sourceTree = "<group>"; };
 		5B1D28D51DAA765500F34B61 /* DataProvider+Reports.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DataProvider+Reports.swift"; sourceTree = "<group>"; };
 		5B1D28D71DAA782300F34B61 /* UIImage+Resizing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Resizing.swift"; sourceTree = "<group>"; };
+		5B4AF52A1DBB51E20080BA7E /* OpenUDID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenUDID.h; sourceTree = "<group>"; };
+		5B4AF52B1DBB51E20080BA7E /* OpenUDID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenUDID.m; sourceTree = "<group>"; };
+		5B4AF5301DBB52420080BA7E /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		5B4DF4C81DA93449008840D1 /* ReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
 		5B4DF4CA1DA93450008840D1 /* ReportView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportView.swift; sourceTree = "<group>"; };
 		5B4DF4CD1DA93694008840D1 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
@@ -192,6 +196,23 @@
 			name = Cell;
 			sourceTree = "<group>";
 		};
+		5B4AF5281DBB51E20080BA7E /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				5B4AF5291DBB51E20080BA7E /* OpenUDID */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		5B4AF5291DBB51E20080BA7E /* OpenUDID */ = {
+			isa = PBXGroup;
+			children = (
+				5B4AF52A1DBB51E20080BA7E /* OpenUDID.h */,
+				5B4AF52B1DBB51E20080BA7E /* OpenUDID.m */,
+			);
+			path = OpenUDID;
+			sourceTree = "<group>";
+		};
 		5B4DF4C61DA93431008840D1 /* Signup */ = {
 			isa = PBXGroup;
 			children = (
@@ -289,6 +310,7 @@
 			isa = PBXGroup;
 			children = (
 				5BC820871DA9110B00445B04 /* Classes */,
+				5B4AF5281DBB51E20080BA7E /* Library */,
 				5BC8208C1DA9117500445B04 /* Supporting Files */,
 			);
 			path = RoadRo;
@@ -312,6 +334,7 @@
 				83A162621DB5258800250921 /* InfoPlist.strings */,
 				83A1625D1DB5258700250921 /* Localizable.strings */,
 				5BC8207D1DA910E300445B04 /* LaunchScreen.storyboard */,
+				5B4AF5301DBB52420080BA7E /* Bridging-Header.h */,
 				5BC820801DA910E300445B04 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -577,6 +600,7 @@
 				5B89EB861DA9964000779243 /* HistoryView.swift in Sources */,
 				5B1D28D81DAA782300F34B61 /* UIImage+Resizing.swift in Sources */,
 				5B4DF4E01DA96990008840D1 /* CellConfigurator.swift in Sources */,
+				5B4AF52C1DBB51E20080BA7E /* OpenUDID.m in Sources */,
 				5B1D28D21DAA64DE00F34B61 /* ReportCardView.swift in Sources */,
 				5B1D28CC1DAA573C00F34B61 /* FlowBaseViewController.swift in Sources */,
 				5B4DF4DE1DA96990008840D1 /* ObjectsTableViewDataSource.swift in Sources */,
@@ -759,6 +783,7 @@
 				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = ro.wip.RoadRo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RoadRo/Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -776,6 +801,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ro.wip.RoadRo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RoadRo/Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

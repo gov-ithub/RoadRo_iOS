@@ -9,7 +9,7 @@
 import Foundation
 extension Config {
   struct Urls {
-    private static var kNetworkApiUrlStaging = "http://10.10.20.95:9000/api"
+    private static var kNetworkApiUrlStaging = "http://193.230.8.35:23023/api"
     
     // Api url
     static let kNetworkApiUrl : String = {

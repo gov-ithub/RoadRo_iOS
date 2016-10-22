@@ -14,7 +14,11 @@ extension DataProvider {
   
   @discardableResult public func doRegister(phone: String, completion: DataResponseHandler?) -> Cancelable? {
     
-    let params = [ "phone": phone ]
+    let deviceId = OpenUDID.value() as String
+    let params = [
+      "phone": phone,
+      "device_id": deviceId
+    ]
     return self.performRequest(method: .post, path: ApiPath.Register.path(), params: params) { (result, errorMessage) -> Void in
       
       guard let result = result as? JSON else {
