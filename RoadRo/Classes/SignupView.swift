@@ -41,9 +41,6 @@ class SignupView: UIView {
     let view = RoundedButton(title: title)
     return view
   }()
-
-  // background scroll view needed for small screens
-  private var scrollView = UIScrollView()
   
   var onSendPressed: (() -> Void)?
   
@@ -65,99 +62,56 @@ class SignupView: UIView {
   fileprivate func setup() {
     self.backgroundColor = UIColor.white
 
-    // Add the scroll view (will be needed for small displays like the iPad
-    // iPhone compatibility layout)
-    self.addSubview(scrollView)
-    constrain(scrollView) { view in
-      view.edges == view.superview!.edges
-    }
-
-    // Can't use both leading and trailing when laying out inside a scroll view,
-    // because it won't fill the screen horizontally, so use centerX and width
-    // instead.
+    // Currently this is only tested for 3.5" displays. Smaller displays would
+    // need their testing, if supported.
+    let smallScreen = Device.IS_3_5_INCHES_OR_SMALLER()
+    let topDist: CGFloat = smallScreen ? 13.5 : 30
+    let separatorDist: CGFloat = smallScreen ? 10 : 40
     
     // Add photo label
-    scrollView.addSubview(titleLabel)
+    self.addSubview(titleLabel)
     constrain(titleLabel) { view in
-      view.top == view.superview!.top + 30
-      view.centerX == view.superview!.centerX
-      view.width == view.superview!.width - 40
+      view.top == view.superview!.top + topDist
+      view.leading == view.superview!.leading + 20
+      view.trailing == view.superview!.trailing - 20
     }
     
     // Add separator
     let separator1 = LineView()
-    scrollView.addSubview(separator1)
+    self.addSubview(separator1)
     constrain(separator1, titleLabel) { view, topView in
-      view.top == topView.bottom + 40
-      view.centerX == view.superview!.centerX
-      view.width == view.superview!.width
+      view.top == topView.bottom + separatorDist
+      view.leading == view.superview!.leading
+      view.trailing == view.superview!.trailing
     }
     
-    scrollView.addSubview(textField)
+    self.addSubview(textField)
     constrain(textField, separator1) { view, topView in
       view.top == topView.bottom + 10
-      view.centerX == view.superview!.centerX
-      view.width == view.superview!.width - 40
+      view.leading == view.superview!.leading + 20
+      view.trailing == view.superview!.trailing - 20
       view.height == 40
     }
     
     // Add separator
     let separator2 = LineView()
-    scrollView.addSubview(separator2)
+    self.addSubview(separator2)
     constrain(separator2, textField) { view, topView in
       view.top == topView.bottom + 10
-      view.centerX == view.superview!.centerX
-      view.width == view.superview!.width
+      view.leading == view.superview!.leading
+      view.trailing == view.superview!.trailing
     }
     
     // Add send button
     sendView.addTarget(self, action: #selector(sendPressed), for: .touchUpInside)
-    scrollView.addSubview(sendView)
+    self.addSubview(sendView)
     constrain(sendView, separator2) { view, topView in
-      view.top == topView.bottom + 40
+      view.top == topView.bottom + separatorDist
       view.centerX == view.superview!.centerX
-      // necessary for scroll view superview
-      view.bottom == view.superview!.bottom - 20
     }
-
-    self.setupKeyboardAutoLayout()
   }
   
   @objc private func sendPressed() {
     onSendPressed?()
   }
-
-  //============================================================================
-  //
-  // Keyboard position notifications
-  // With help from:
-  // https://www.hackingwithswift.com/example-code/uikit/how-to-adjust-a-uiscrollview-to-fit-the-keyboard
-  //
-
-  //
-  // Sets up keyboard notifications to resize the scroll view
-  //
-  private func setupKeyboardAutoLayout() {
-    let notificationCenter = NotificationCenter.default
-    notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard), name: Notification.Name.UIKeyboardWillHide, object: nil)
-    notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard), name: Notification.Name.UIKeyboardWillChangeFrame, object: nil)
-  }
-
-  //
-  // The callback
-  //
-  @objc fileprivate func adjustForKeyboard(notification: Notification) {
-    let userInfo = notification.userInfo!
-    let screenEndFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
-
-    let viewEndFrame = self.convert(screenEndFrame, from: self.window)
-
-    if notification.name == Notification.Name.UIKeyboardWillHide {
-      scrollView.contentInset = UIEdgeInsets.zero
-    } else {
-      scrollView.contentInset = UIEdgeInsetsMake(0, 0, viewEndFrame.height, 0)
-    }
-    scrollView.scrollIndicatorInsets = scrollView.contentInset
-  }
-
 }
