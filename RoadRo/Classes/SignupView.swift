@@ -61,11 +61,17 @@ class SignupView: UIView {
   
   fileprivate func setup() {
     self.backgroundColor = UIColor.white
+
+    // Currently this is only tested for 3.5" displays. Smaller displays would
+    // need their testing, if supported.
+    let smallScreen = Device.IS_3_5_INCHES_OR_SMALLER()
+    let topDist: CGFloat = smallScreen ? 13.5 : 30
+    let separatorDist: CGFloat = smallScreen ? 10 : 40
     
     // Add photo label
     self.addSubview(titleLabel)
     constrain(titleLabel) { view in
-      view.top == view.superview!.top + 30
+      view.top == view.superview!.top + topDist
       view.leading == view.superview!.leading + 20
       view.trailing == view.superview!.trailing - 20
     }
@@ -74,7 +80,7 @@ class SignupView: UIView {
     let separator1 = LineView()
     self.addSubview(separator1)
     constrain(separator1, titleLabel) { view, topView in
-      view.top == topView.bottom + 40
+      view.top == topView.bottom + separatorDist
       view.leading == view.superview!.leading
       view.trailing == view.superview!.trailing
     }
@@ -100,7 +106,7 @@ class SignupView: UIView {
     sendView.addTarget(self, action: #selector(sendPressed), for: .touchUpInside)
     self.addSubview(sendView)
     constrain(sendView, separator2) { view, topView in
-      view.top == topView.bottom + 40
+      view.top == topView.bottom + separatorDist
       view.centerX == view.superview!.centerX
     }
   }
