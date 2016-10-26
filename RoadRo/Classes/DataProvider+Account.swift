@@ -12,12 +12,13 @@ import SwiftyJSON
 
 extension DataProvider {
   
-  @discardableResult public func doRegister(phone: String, completion: DataResponseHandler?) -> Cancelable? {
+  @discardableResult public func doRegister(phone: String, accessToken: String, completion: DataResponseHandler?) -> Cancelable? {
     
     let deviceId = OpenUDID.value() as String
     let params = [
       "phone": phone,
-      "device_id": deviceId
+      "device_id": deviceId,
+      "access_token": accessToken
     ]
     return self.performRequest(method: .post, path: ApiPath.Register.path(), params: params) { (result, errorMessage) -> Void in
       

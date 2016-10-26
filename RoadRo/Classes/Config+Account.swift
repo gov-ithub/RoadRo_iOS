@@ -13,7 +13,7 @@ let kAccountToken = "kAccountToken"
 
 extension Config {
   
-  var isLoggedIn : Bool {
+  static var isLoggedIn : Bool {
     get {
       if let _ = Settings.objectForKey(key: kAccountUserId) {
         return true
@@ -22,13 +22,13 @@ extension Config {
     }
   }
   
-  var userId: String? {
+  static var userId: String? {
     get {
       return Settings.objectForKey(key: kAccountUserId) as? String
     }
   }
   
-  var accessToken: String? {
+  static var accessToken: String? {
     get {
       return Settings.objectForKey(key: kAccountToken) as? String
     }

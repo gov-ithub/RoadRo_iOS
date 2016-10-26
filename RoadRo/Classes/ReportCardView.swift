@@ -14,8 +14,8 @@ class ReportCardView: UIView {
   fileprivate var imageView: UIImageView = {
     let imageView = UIImageView()
     imageView.backgroundColor = UIColor.backgroundGrayColor()
-    imageView.image = UIImage(named: "photoPlaceholder")
     imageView.contentMode = .center
+    imageView.clipsToBounds = true
     return imageView
   }()
   
@@ -85,6 +85,12 @@ class ReportCardView: UIView {
   
   func configure(model: ReportViewModel) {
     self.statusView.status = model.status
+    
+    if let thumb = model.thumb?.thumbUrl, let url = URL(string: thumb) {
+      self.imageView.rr_setImage(url: url, placeholder: UIImage(named: "photoPlaceholder"))
+    } else {
+      self.imageView.image = UIImage(named: "photoPlaceholder")
+    }
   }
   
   static let genericCardView = ReportCardView()

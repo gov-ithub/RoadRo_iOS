@@ -17,6 +17,16 @@ class ReportViewModel: NSObject {
   var comments: String?
   var likes: Int = 0
   var status: ReportStatus!
+  var images: [ReportImage]?
+  
+  var thumb: ReportImage? {
+    get {
+      if let image = self.images?.first {
+        return image
+      }
+      return nil
+    }
+  }
   
   init(data: DataReport) {
     self.id = data.id
@@ -28,5 +38,11 @@ class ReportViewModel: NSObject {
     
     let status = ReportStatus(rawValue: data.status)
     self.status = status
+    
+    if let imagesData = data.images {
+      if let images = NSKeyedUnarchiver.unarchiveObject(with: imagesData) as? [ReportImage] {
+        self.images = images
+      }
+    }
   }
 }

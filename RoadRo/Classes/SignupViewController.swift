@@ -44,13 +44,13 @@ class SignupViewController: FlowBaseViewController {
   }
   
   @objc fileprivate func sendPressed() {
-    guard let phoneNumber = self.contentView.phoneNumber else {
+    guard let phoneNumber = self.contentView.phoneNumber, let accessToken = Config.accessToken else {
       return
     }
 
     // Call register api
     ActivityIndicator.show()
-    self.config.dataProvider.doRegister(phone: phoneNumber) {[weak self] (result, error) in
+    self.config.dataProvider.doRegister(phone: phoneNumber, accessToken: accessToken) {[weak self] (result, error) in
       ActivityIndicator.hide()
       
       if let error = error {

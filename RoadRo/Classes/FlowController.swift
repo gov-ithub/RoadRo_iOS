@@ -28,7 +28,7 @@ class FlowController : NSObject, UIGestureRecognizerDelegate {
   
   func rootController() -> UIViewController {
     var controller: UIViewController!
-    if self.config.isLoggedIn {
+    if Config.isLoggedIn {
       controller = self.createMainController()
     } else {
       controller = self.createIntroController()

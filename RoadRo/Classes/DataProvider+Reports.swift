@@ -33,4 +33,39 @@ extension DataProvider {
       completion?(result, errorMessage)
     }
   }
+  
+  @discardableResult public func doGetMyReports(dataStore: CoreDataStore, completion: DataResponseHandler?) -> Cancelable? {
+    return self.performRequest(method: .get, path: ApiPath.TicketsMine.path(), params: nil) { (result, errorMessage) -> Void in
+      
+      dataStore.realm.performInBackground(block: { (realm) in
+        
+        guard let result = result as? JSON else {
+          completion?(nil, errorMessage)
+          return
+        }
+        
+        var existingItems: [String] = []
+        
+        if let reports = result["tickets"].array {
+          for report in reports {
+            
+            if let dataReport = DataReport.createFromJSON(params: report, realm: realm) {
+              realm.add(dataReport, update: true)
+              existingItems.append(dataReport.id)
+            }
+          }
+        }
+        
+        // Remove old reports
+        let predicate = NSPredicate(format: "NOT id IN %@", existingItems)
+        let dataToRemove = realm.objects(DataReport.self).filter(predicate)
+        for data in dataToRemove {
+          realm.delete(data)
+        }
+        
+        }, completion: { 
+          completion?(nil, errorMessage)
+      })
+    }
+  }
 }

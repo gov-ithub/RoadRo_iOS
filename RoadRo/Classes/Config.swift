@@ -41,7 +41,7 @@ class Config {
 extension Config : DataProviderAuthorizationDataSource {
   
   func dataProviderAccessToken() -> String? {
-    return self.accessToken
+    return Config.accessToken
   }
 }
 

@@ -49,16 +49,14 @@ extension DataProvider {
       url = self.kNetworkApiURL + path
     }
     
-    var params = params
-    if let access_token = self.authorizationDataSource?.dataProviderAccessToken() {
-      params?["access_token"] = access_token
-    }
-    
     DLog(object: "API URL: \(url)")
     DLog(object: "API PARAMS: \(params)")
     
     // Authorization header
-    let headers: [String : String]? = ["Content-Type": "application/json"]
+    var headers: [String : String] = ["Content-Type": "application/json"]
+    if let access_token = self.authorizationDataSource?.dataProviderAccessToken() {
+      headers["Authorization"] = access_token
+    }
     
     let encoding = Alamofire.JSONEncoding.default
     let request = self.manager.request(url, method: method, parameters: params, encoding: encoding, headers: headers)

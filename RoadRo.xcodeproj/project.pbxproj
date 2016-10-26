@@ -64,7 +64,6 @@
 		5BC820C41DA91CE900445B04 /* NetworkReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC820C31DA91CE900445B04 /* NetworkReachability.swift */; };
 		5BC820C61DA91CFB00445B04 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC820C51DA91CFB00445B04 /* SignupView.swift */; };
 		5BC820CC1DA91DA600445B04 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BC820C71DA91DA600445B04 /* Alamofire.framework */; };
-		5BC820CD1DA91DA600445B04 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BC820C81DA91DA600445B04 /* AlamofireImage.framework */; };
 		5BC820CE1DA91DA600445B04 /* Cartography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BC820C91DA91DA600445B04 /* Cartography.framework */; };
 		5BC820CF1DA91DA600445B04 /* Reachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BC820CA1DA91DA600445B04 /* Reachability.framework */; };
 		5BC820D01DA91DA600445B04 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BC820CB1DA91DA600445B04 /* SwiftyJSON.framework */; };
@@ -80,6 +79,10 @@
 		838250551DAA1FCE0033269D /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838250541DAA1FCE0033269D /* IntroView.swift */; };
 		83A1625B1DB5258700250921 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 83A1625D1DB5258700250921 /* Localizable.strings */; };
 		83A162601DB5258800250921 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 83A162621DB5258800250921 /* InfoPlist.strings */; };
+		91AFCCB41DC096B5003E7B5D /* ReportImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AFCCB31DC096B5003E7B5D /* ReportImage.swift */; };
+		91AFCCB61DC09BFB003E7B5D /* Dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AFCCB51DC09BFB003E7B5D /* Dispatch.swift */; };
+		91AFCCBE1DC0B725003E7B5D /* UIImageView+Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AFCCBD1DC0B725003E7B5D /* UIImageView+Download.swift */; };
+		91AFCCC01DC0BA5E003E7B5D /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91AFCCBF1DC0BA5E003E7B5D /* Kingfisher.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -168,6 +171,10 @@
 		83A162641DB52CEE00250921 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		83A162651DB52FA900250921 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		83A162661DB52FA900250921 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		91AFCCB31DC096B5003E7B5D /* ReportImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportImage.swift; sourceTree = "<group>"; };
+		91AFCCB51DC09BFB003E7B5D /* Dispatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dispatch.swift; sourceTree = "<group>"; };
+		91AFCCBD1DC0B725003E7B5D /* UIImageView+Download.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Download.swift"; sourceTree = "<group>"; };
+		91AFCCBF1DC0BA5E003E7B5D /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,13 +182,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91AFCCC01DC0BA5E003E7B5D /* Kingfisher.framework in Frameworks */,
 				5B4DF4EB1DA96B61008840D1 /* Realm.framework in Frameworks */,
 				5BC820CF1DA91DA600445B04 /* Reachability.framework in Frameworks */,
 				5B4DF4EC1DA96B61008840D1 /* RealmSwift.framework in Frameworks */,
 				5BC820CC1DA91DA600445B04 /* Alamofire.framework in Frameworks */,
 				5BC820CE1DA91DA600445B04 /* Cartography.framework in Frameworks */,
 				5BC820D01DA91DA600445B04 /* SwiftyJSON.framework in Frameworks */,
-				5BC820CD1DA91DA600445B04 /* AlamofireImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +293,7 @@
 			isa = PBXGroup;
 			children = (
 				5B4DF4E71DA96AE7008840D1 /* ReportViewModel.swift */,
+				91AFCCB31DC096B5003E7B5D /* ReportImage.swift */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -392,10 +400,12 @@
 		5BC820A11DA9140400445B04 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				91AFCCBD1DC0B725003E7B5D /* UIImageView+Download.swift */,
 				5B89EB7B1DA9800C00779243 /* LocationTracker.swift */,
 				5B4DF4EE1DA970AE008840D1 /* KeyboardHandler.swift */,
 				5B89EB7D1DA98B0000779243 /* ImagePicker.swift */,
 				5B2A6FA61DBBBB2E00D1D590 /* Device.swift */,
+				91AFCCB51DC09BFB003E7B5D /* Dispatch.swift */,
 				5B4DF4D41DA96973008840D1 /* Data */,
 				5B4DF4D11DA9383A008840D1 /* Other */,
 				5BC820A21DA9141B00445B04 /* Custom view */,
@@ -422,6 +432,7 @@
 		5BC820A51DA9163000445B04 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				91AFCCBF1DC0BA5E003E7B5D /* Kingfisher.framework */,
 				5B4DF4E91DA96B61008840D1 /* Realm.framework */,
 				5B4DF4EA1DA96B61008840D1 /* RealmSwift.framework */,
 				5BC820C71DA91DA600445B04 /* Alamofire.framework */,
@@ -556,7 +567,7 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Cartography.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/AlamofireImage.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Reachability.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
@@ -599,8 +610,10 @@
 				838250551DAA1FCE0033269D /* IntroView.swift in Sources */,
 				5BC820911DA9131E00445B04 /* Config+Keys.swift in Sources */,
 				5B1D28C81DAA42EA00F34B61 /* UIViewController+Presentation.swift in Sources */,
+				91AFCCB41DC096B5003E7B5D /* ReportImage.swift in Sources */,
 				5BC820D41DA91DED00445B04 /* Logging.swift in Sources */,
 				5B1D28D41DAA6BF900F34B61 /* ReportStatusView.swift in Sources */,
+				91AFCCB61DC09BFB003E7B5D /* Dispatch.swift in Sources */,
 				5B89EB861DA9964000779243 /* HistoryView.swift in Sources */,
 				5B1D28D81DAA782300F34B61 /* UIImage+Resizing.swift in Sources */,
 				5B4DF4E01DA96990008840D1 /* CellConfigurator.swift in Sources */,
@@ -612,6 +625,7 @@
 				5BC820B41DA919C900445B04 /* DataProvider.swift in Sources */,
 				5BC820BF1DA91AF700445B04 /* DataProvider+Account.swift in Sources */,
 				5BC8209E1DA913F300445B04 /* FlowController.swift in Sources */,
+				91AFCCBE1DC0B725003E7B5D /* UIImageView+Download.swift in Sources */,
 				5B89EB881DA996D800779243 /* HistoryDataProvider.swift in Sources */,
 				5B89EB7E1DA98B0000779243 /* ImagePicker.swift in Sources */,
 				5B4DF4E41DA96A00008840D1 /* CoreDataStore.swift in Sources */,

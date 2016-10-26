@@ -45,8 +45,8 @@ class HistoryViewController: UIViewController {
     // Data source
     self.setupDatasource()
     
-    // Prefill
-    self.prefillWithData()
+    // Refresh list
+    self.doRefresh()
   }
   
   fileprivate func setupDatasource() {
@@ -86,27 +86,12 @@ class HistoryViewController: UIViewController {
   }
   
   fileprivate func doRefresh() {
-    print("do refresh")
-    
-    self.contentView.tableView.endRefreshing(animated: true)
-  }
-}
-
-extension HistoryViewController {
-  
-  //TODO: remove
-  fileprivate func prefillWithData() {
-    let realm = self.config.dataStore.realm!
-    if realm.objects(DataReport.self).count > 0 {
-      return
-    }
-    
-    try! realm.write {
-      for i in 0..<20 {
-        let data = DataReport()
-        data.id = "\(i)"
-        data.status = i % 3
-        realm.add(data)
+    self.config.dataProvider.doGetMyReports(dataStore: self.config.dataStore) {[weak self] (result, error) in
+      self?.contentView.tableView.endRefreshing(animated: true)
+      
+      if let error = error {
+        AlertView.show(withMessage: error)
+        return
       }
     }
   }
