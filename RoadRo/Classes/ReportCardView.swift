@@ -32,6 +32,7 @@ class ReportCardView: UIView {
     label.font = UIFont.fontAppRegular(16)
     label.text = "str. Constantin Brancusi, nr. 12"
     label.textColor = UIColor.textColor()
+    label.numberOfLines = 0
     return label
   }()
   
@@ -59,7 +60,6 @@ class ReportCardView: UIView {
       view.leading == view.superview!.leading + 16
       view.width == 70
       view.height == 70
-      view.bottom == view.superview!.bottom - 16
     }
     
     self.addSubview(timeLabel)
@@ -77,8 +77,10 @@ class ReportCardView: UIView {
     }
     
     self.addSubview(statusView)
-    constrain(statusView, imageView) { view, leftView in
-      view.bottom == leftView.bottom
+    constrain(statusView, addressLabel, imageView) { view, addressLabel, leftView in
+//      view.bottom == leftView.bottom ~ 750
+      view.bottom == view.superview!.bottom - 16
+      view.top == addressLabel.bottom + 6
       view.leading == leftView.trailing + 16
     }
   }
@@ -86,6 +88,10 @@ class ReportCardView: UIView {
   func configure(model: ReportViewModel) {
     self.statusView.status = model.status
     
+    // Address
+    self.addressLabel.text = model.address
+    
+    // Set image
     if let thumb = model.thumb?.thumbUrl, let url = URL(string: thumb) {
       self.imageView.rr_setImage(url: url, placeholder: UIImage(named: "photoPlaceholder"))
     } else {

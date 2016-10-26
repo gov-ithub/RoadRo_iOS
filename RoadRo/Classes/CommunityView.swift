@@ -11,6 +11,13 @@ import Cartography
 
 class CommunityView: UIView {
   
+  var tableView: TableView = {
+    let tableView = TableView()
+    tableView.noContentMessage = NSLocalizedString("There are no repports to show", comment: "")
+    tableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: 1, height: 1))
+    return tableView
+  }()
+  
   init() {
     super.init(frame: CGRect.zero)
     self.setup()
@@ -22,5 +29,11 @@ class CommunityView: UIView {
   
   fileprivate func setup() {
     self.backgroundColor = UIColor.backgroundColor()
+    
+    // Table
+    self.addSubview(tableView)
+    constrain(tableView) { view in
+      view.edges == view.superview!.edges
+    }
   }
 }
